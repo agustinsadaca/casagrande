@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'PMackinacProMedium';
+  src: url('https://d1hy0tp7pfir2x.cloudfront.net/fonts/webFonts/PMackinacProMedium/font.woff2') format('woff2'),
+    url('https://d1hy0tp7pfir2x.cloudfront.net/fonts/webFonts/PMackinacProMedium/font.woff') format('woff');
+  src: url('https://d1hy0tp7pfir2x.cloudfront.net/fonts/webFonts/PMackinacProMedium/font.woff2') format('woff2'),
+    url('https://d1hy0tp7pfir2x.cloudfront.net/fonts/webFonts/PMackinacProMedium/font.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FuturaPT-Medium';
+  src: url('https://d1hy0tp7pfir2x.cloudfront.net/fonts/webFonts/FuturaPT-Medium/font.woff2') format('woff2'),
+    url('https://d1hy0tp7pfir2x.cloudfront.net/fonts/webFonts/FuturaPT-Medium/font.woff') format('woff');
+  src: url('https://d1hy0tp7pfir2x.cloudfront.net/fonts/webFonts/FuturaPT-Medium/font.woff2') format('woff2'),
+    url('https://d1hy0tp7pfir2x.cloudfront.net/fonts/webFonts/FuturaPT-Medium/font.woff') format('woff');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "IBM Plex Sans";
+  background-color: #fbfbfb;
+}
+
+/* Start: Font family */
+.ffIBMPSR {
+  font-family: "IBM Plex Sans" !important;
+  font-display: swap;
+  font-weight: 400;
+}
+
+.ffIBMPSRSB {
+  font-family: "IBM Plex Sans" !important;
+  font-display: swap;
+  font-weight: 600;
+}
+
+.ffP22MPM {
+  font-family: PMackinacProMedium !important;
+  font-weight: 400;
+  font-display: swap;
+}
+/* End: Font family */
+
+/* Start: Colors */
+.cFFFFFF {
+  color: #FFFFFF;
+}
+
+.c0091FF {
+  color: #0091FF;
+}
+
+.c424242 {
+  color: #424242;
+}
+
+.cC1E4FB {
+  color: #C1E4FB;
+}
+
+.c868686 {
+  color: #868686;
+}
+
+.c272727 {
+  color: #272727;
+}
+
+.bg-cFFFFFF {
+  background-color: #FFFFFF;
+}
+
+.bg-cC1E4FB {
+  background-color: #C1E4FB;
+}
+/* End: Colors */
+
+/* Start font size */
+.fs12 {
+  font-size: 12px
+}
+
+.fs14 {
+  font-size: 14px
+}
+
+.fs15 {
+  font-size: 15px
+}
+
+
+.fs16 {
+  font-size: 16px;
+}
+.fs18 {
+  font-size: 18px;
+}
+.fs30 {
+  font-size: 30px;
+}
+.fs52 {
+  font-size: 52px;
+}
+/* End font size */
+/* Start font weight */
+.fw400 {
+  font-weight: 400;
+}
+/* End font weight */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: PMackinacProMedium;
+  font-weight: 400;
+  font-display: swap;
+}
+
+p,
+div,
+a,
+span {
+  font-family: "IBM Plex Sans";
+  font-display: swap;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding-left: 11%;
+  padding-right: 11%;
+}
+
+button {
+  border-radius: 22px;
+  background-color: #2492ff;
+  padding: 10px 26px;
+  color: #FFFFFF;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 42px;
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    padding: 60px 12px 60px 12px;
+  }
+}

@@ -1,0 +1,131 @@
+.customModalContent {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.customModalHeader {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 0;
+}
+
+.customModalBody {
+  padding-top: 0;
+}
+
+.cookiebanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+@media (min-width: 640px) {
+  .cookiebanner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.cookietext {
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+}
+
+@media (min-width: 640px) {
+  .cookietext {
+    margin-bottom: 0;
+    flex: 1;
+    padding-right: 15px;
+  }
+}
+
+.cookielink {
+  color: #007bff;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+.cookiebuttoncontainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 640px) {
+  .cookiebuttoncontainer {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.cookiesettingsbutton {
+  border-color: #007bff;
+  color: #007bff;
+  border-radius: 20px;
+  overflow: initial
+}
+
+.cookiesettings {
+  padding: 20px;
+}
+
+.switchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cookieacceptbutton {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+.cookiemodalbuttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+@media (max-width: 640px) {
+  .cookiemodalbuttons {
+    flex-direction: column;
+  }
+
+  .cookiemodalbuttons button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cookiemodalbuttons {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .cookiebuttoncontainer {
+    gap: 20px;
+  }
+
+  .cookieacceptbutton,
+  .cookiesettingsbutton {
+    flex: 1;
+  }
+}

@@ -1,0 +1,9 @@
+/* 
+   It is important to keep correct styles import order. 
+   For example, if you want to use Button component, 
+   you need to import styles for UnstyledButton first 
+   and then import styles for Button. 
+*/
+
+@import '@mantine/core/styles/AppShell.layer.css';
+@import '@mantine/core/styles/global.layer.css';

@@ -1,0 +1,23 @@
+.phoneInputContainer {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.rootCountryPicker {
+  border: 1px solid #868686;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: none;
+
+}
+
+.phoneInput {
+  border: 1px solid #868686;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  width: 100%;
+}
+
+.labelPhoneInput {
+  padding-left: 10px;
+}
