@@ -1,0 +1,87 @@
+[
+  {
+    "id": "casa-cl",
+    "projectName": "Proyecto Casa CL",
+    "subtitle": "LDA arquitectas",
+    "imageUrl": "/projects/3_A_LDA.webp",
+    "details": {
+      "project": {
+        "title": "Proyecto",
+        "description": [
+          "Cálculo de estructura",
+          "Instalaciones sanitarias",
+          "Instalaciones de gas",
+          "Dirección técnica estructural"
+        ]
+      },
+      "area": {
+        "title": "Superficie",
+        "description": "225 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
+    }
+  },
+  {
+    "id": "oficina-mx",
+    "projectName": "Oficinas Corporativas MX",
+    "subtitle": "Diseño ejecutivo",
+    "imageUrl": "/projects/oficina-mx.jpg",
+    "details": {
+      "project": {
+        "title": "Proyecto",
+        "description": [
+          "Diseño arquitectónico",
+          "Planos ejecutivos",
+          "Supervisión de obra"
+        ]
+      },
+      "area": {
+        "title": "Superficie",
+        "description": "480 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Santa Fe, Ciudad de México"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Acero y vidrio con estructura ligera"
+      }
+    }
+  },
+  {
+    "id": "oficina-mx1",
+    "projectName": "Oficinas Corporativas MX",
+    "subtitle": "Diseño ejecutivo",
+    "imageUrl": "/projects/oficina-mx.jpg",
+    "details": {
+      "project": {
+        "title": "Proyecto",
+        "description": [
+          "Diseño arquitectónico",
+          "Planos ejecutivos",
+          "Supervisión de obra"
+        ]
+      },
+      "area": {
+        "title": "Superficie",
+        "description": "480 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Santa Fe, Ciudad de México"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Acero y vidrio con estructura ligera"
+      }
+    }
+  }
+]

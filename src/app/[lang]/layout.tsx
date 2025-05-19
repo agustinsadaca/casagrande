@@ -4,6 +4,8 @@ import { Metadata } from "next"
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import { IBM_Plex_Sans } from 'next/font/google'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
 import ClientView from "./ClientView"
 import "./globals.css"
 
@@ -56,7 +58,11 @@ export default async function LocaleLayout({ children }: { children: React.React
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <ClientView >{children}</ClientView>
+          <ClientView >
+            <Header />
+            {children}
+            <Footer />
+          </ClientView>
         </NextIntlClientProvider>
       </body>
     </html >

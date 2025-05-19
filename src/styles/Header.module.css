@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 120px 60px 70px;
+  font-family: 'Unageo Regular', sans-serif;
+}
+
+.logo {
+  font-family: 'Unageo Regular', sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.nav {
+  margin-right: 50px;
+}
+
+.nav a {
+  font-family: 'Unageo Regular', sans-serif;
+  margin-left: 6rem;
+  text-decoration: none;
+  color: inherit;
+  font-size: 21px;
+}

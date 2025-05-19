@@ -1,14 +1,12 @@
-
 'use client'
+import HeroImage from '@/components/Hero'
+import ProjectDetails from '@/components/Projects'
 
-function Page() {
-
+export default function Home() {
   return (
-    <div>
-      Hola
-    </div>
+    <>
+      <HeroImage />
+      <ProjectDetails />
+    </>
   )
 }
-export default Page
-
-

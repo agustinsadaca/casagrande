@@ -1,8 +1,7 @@
 'use client'
-
+import ReCaptchaV3 from '@/components/ReCaptchaV3'
 import { MantineProvider, createTheme } from '@mantine/core'
 import { useCallback, useState } from 'react'
-import ReCaptchaV3 from '../../components/ReCaptchaV3'
 import { ReCaptchaContext } from '../ReCaptchaContext'
 
 
@@ -11,9 +10,12 @@ type ClientViewProps = {
 }
 
 const theme = createTheme({
-  fontFamily: '"IBM Plex Sans", sans-serif',
+  fontFamily: '"Leorio", sans-serif',
   fontFamilyMonospace: 'Monaco, Courier, monospace',
-  headings: { fontFamily: 'PMackinacProMedium', fontWeight: '400' }
+  headings: {
+    fontFamily: '"Unageo Regular", sans-serif',
+    fontWeight: '400'
+  }
 })
 
 
@@ -28,10 +30,8 @@ export default function ClientView({ children }: ClientViewProps) {
   return (
     <>
       <ReCaptchaContext.Provider value={{ captchaToken, setCaptchaToken }}>
-        {/* <HeaderScripts /> */}
         <MantineProvider forceColorScheme='light' theme={theme} withCssVariables>
           {children}
-          {/* <BodyScripts /> */}
           <ReCaptchaV3
             siteKey={process.env.NEXT_PUBLIC_GCAPTCHA_WEB_KEY || ''}
             onToken={handleToken}

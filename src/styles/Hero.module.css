@@ -1,0 +1,28 @@
+.hero {
+  width: 100%;
+  overflow: hidden;
+  background-color: #fbfbfb;
+  margin-bottom: 200px;
+}
+
+.image {
+  display: block;
+  margin: 180px auto 0;
+  max-width: 100%;
+  height: auto;
+  width: 500px;
+  height: auto;
+  object-fit: cover;
+}
+
+.button {
+  display: block;
+  margin: 0px auto;
+  background-color: #E7E7E7;
+  color: black;
+  border: none;
+  padding: 5px 30px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 130px;
+}

@@ -9,5 +9,6 @@
     "source.addMissingImports",
     "source.organizeImports"
   ],
-  "liveshare.accessibility.accessibilityFeaturesEnabled": true
+  "liveshare.accessibility.accessibilityFeaturesEnabled": true,
+  "editor.autoClosingQuotes": "always",
 }
