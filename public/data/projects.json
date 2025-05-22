@@ -1,9 +1,10 @@
 [
   {
     "id": "casa-cl",
+    "imageHomeUrls": ["/projects/3_A_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp"],
     "projectName": "Proyecto Casa CL",
     "subtitle": "LDA arquitectas",
-    "imageUrl": "/projects/3_A_LDA.webp",
+    "imageDetailUrls": ["/projects/3_A_LDA_COLOR.webp"],
     "details": {
       "project": {
         "title": "Proyecto",
@@ -29,58 +30,32 @@
     }
   },
   {
-    "id": "oficina-mx",
-    "projectName": "Oficinas Corporativas MX",
-    "subtitle": "Diseño ejecutivo",
-    "imageUrl": "/projects/oficina-mx.jpg",
+    "id": "casa-cl1",
+    "imageHomeUrls": ["/projects/3_A_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp"],
+    "projectName": "Proyecto Casa CL",
+    "subtitle": "LDA arquitectas",
+    "imageDetailUrls": ["/projects/3_A_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp"],
     "details": {
       "project": {
         "title": "Proyecto",
         "description": [
-          "Diseño arquitectónico",
-          "Planos ejecutivos",
-          "Supervisión de obra"
+          "Cálculo de estructura",
+          "Instalaciones sanitarias",
+          "Instalaciones de gas",
+          "Dirección técnica estructural"
         ]
       },
       "area": {
         "title": "Superficie",
-        "description": "480 m²"
+        "description": "225 m²"
       },
       "ubication": {
         "title": "Ubicación",
-        "description": "Santa Fe, Ciudad de México"
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
       },
       "material": {
         "title": "Materialidad",
-        "description": "Acero y vidrio con estructura ligera"
-      }
-    }
-  },
-  {
-    "id": "oficina-mx1",
-    "projectName": "Oficinas Corporativas MX",
-    "subtitle": "Diseño ejecutivo",
-    "imageUrl": "/projects/oficina-mx.jpg",
-    "details": {
-      "project": {
-        "title": "Proyecto",
-        "description": [
-          "Diseño arquitectónico",
-          "Planos ejecutivos",
-          "Supervisión de obra"
-        ]
-      },
-      "area": {
-        "title": "Superficie",
-        "description": "480 m²"
-      },
-      "ubication": {
-        "title": "Ubicación",
-        "description": "Santa Fe, Ciudad de México"
-      },
-      "material": {
-        "title": "Materialidad",
-        "description": "Acero y vidrio con estructura ligera"
+        "description": "Construcción tradicional"
       }
     }
   }

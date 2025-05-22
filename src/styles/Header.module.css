@@ -4,6 +4,11 @@
   align-items: center;
   padding: 60px 120px 60px 70px;
   font-family: 'Unageo Regular', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: saturate(180%) blur(10px);
+
 }
 
 .logo {
@@ -13,13 +18,58 @@
 }
 
 .nav {
-  margin-right: 50px;
+  margin-right: 150px;
 }
 
 .nav a {
   font-family: 'Unageo Regular', sans-serif;
-  margin-left: 6rem;
+  margin-left: 150px;
   text-decoration: none;
   color: inherit;
   font-size: 21px;
+  transition: color 0.3s ease;
+  color: inherit
+}
+
+.burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .header {
+    padding: 50px;
+    background-color: #fbfbfb;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.opened {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fbfbfb;
+    z-index: 20;
+    padding-bottom: 30px;
+    width: 100%;
+
+  }
+
+  .nav.opened a {
+    margin-left: 30px;
+  }
+
+  .nav a {
+    display: block;
+    padding: 10px 20px;
+    /* Adjust as needed */
+  }
 }

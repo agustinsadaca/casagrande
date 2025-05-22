@@ -89,3 +89,28 @@
   height: auto;
   object-fit: cover;
 }
+
+@media screen and (max-width: 768px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    width: 170px;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  .projectName {
+    margin-top: 70px;
+  }
+
+  .detailSection {
+    padding: 0;
+  }
+
+}

@@ -1,6 +1,5 @@
 .project {
   padding: 2rem;
-  background: #f8f8f8;
 }
 
 .project h2 {
@@ -19,40 +18,19 @@
   color: #333;
 }
 
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
 .projectCard {
-  border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  color: inherit;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  justify-content: center;
+  gap: 100px;
+  margin-bottom: 150px;
 }
 
-.projectCard:hover {
-  transform: translateY(-5px);
-}
-
-.projectImageWrapper {
-  height: 200px;
-  overflow: hidden;
-}
-
-.projectThumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.projectCard:hover .projectThumbnail {
-  transform: scale(1.05);
+.projectsGrid {
+  margin-left: 150px;
 }
 
 .projectTitle {
@@ -67,4 +45,29 @@
   margin: 0;
   color: #666;
   font-style: italic;
+}
+
+.projectsLogoImage {
+  margin-bottom: 70px;
+}
+
+@media (max-width: 768px) {
+  .projectsGrid {
+    margin-left: 0;
+  }
+
+  .projectCard {
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  .projectCard img {
+    width: 100%;
+    height: auto;
+  }
 }

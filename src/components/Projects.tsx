@@ -1,33 +1,19 @@
 'use client'
 
 import styles from '@/styles/Projects.module.css'
+import { useMediaQuery } from '@mantine/hooks'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
+import { ProjectItem } from '../types/project'
 
-type ProjectDetail = {
-  title: string
-  description: string | string[]
-}
-
-export type ProjectItem = {
-  id: string
-  projectName: string
-  subtitle?: string
-  imageUrl?: string
-  details: {
-    project?: ProjectDetail
-    area?: ProjectDetail
-    ubication?: ProjectDetail
-    material?: ProjectDetail
-  }
-}
 
 export default function Projects() {
   const router = useRouter()
   const [projects, setProjects] = useState<ProjectItem[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const isMobile = useMediaQuery('(max-width: 768px)')
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -68,7 +54,9 @@ export default function Projects() {
 
   return (
     <section id="projects" className={styles.projectsSection}>
-      <h2 className={styles.sectionTitle}>Nuestros Proyectos</h2>
+      {!isMobile && (<div className={styles.projectsLogoImage}>
+        <Image src="/logo.svg" alt="logo" className={styles.image} width={180} height={120} />
+      </div>)}
       <div className={styles.projectsGrid}>
         {projects.map((project) => (
           <div
@@ -77,20 +65,26 @@ export default function Projects() {
             className={styles.projectCard}
             style={{ cursor: 'pointer' }}
           >
-            {project.imageUrl && (
-              <div className={styles.projectImageWrapper}>
-                <Image
-                  src={project.imageUrl}
-                  alt={project.projectName}
-                  width={300}
-                  height={200}
-                  className={styles.projectThumbnail}
-                />
-              </div>
-            )}
-            <h3 className={styles.projectTitle}>{project.projectName}</h3>
-            {project.subtitle && (
-              <p className={styles.projectSubtitle}>{project.subtitle}</p>
+            {isMobile ? (
+              <Image
+                src={project.imageHomeUrls[0]}
+                alt={`${project.projectName} image`}
+                width={398}
+                height={398}
+                objectFit="cover"
+              />
+            ) : (
+              project.imageHomeUrls.map((imageUrl, index) => (
+                <div key={index}>
+                  <Image
+                    src={imageUrl}
+                    alt={`${project.projectName} image ${index + 1}`}
+                    width={398}
+                    height={398}
+                    objectFit="cover"
+                  />
+                </div>
+              ))
             )}
           </div>
         ))}

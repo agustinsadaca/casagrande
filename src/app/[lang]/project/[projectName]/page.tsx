@@ -4,28 +4,11 @@ import styles from '@/styles/Project.module.css'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-
-type ProjectDetail = {
-  title: string
-  description: string | string[]
-}
-
-type ProjectData = {
-  id: string
-  projectName: string
-  subtitle?: string
-  imageUrl?: string
-  details: {
-    project?: ProjectDetail
-    area?: ProjectDetail
-    ubication?: ProjectDetail
-    material?: ProjectDetail
-  }
-}
+import { ProjectItem } from '../../../../types/project'
 
 
 export default function ProjectPage() {
-  const [projectData, setProjectData] = useState<ProjectData | null>(null)
+  const [projectData, setProjectData] = useState<ProjectItem | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const params = useParams()
@@ -39,7 +22,7 @@ export default function ProjectPage() {
           throw new Error('Failed to fetch projects data')
         }
 
-        const projects: ProjectData[] = await response.json()
+        const projects: ProjectItem[] = await response.json()
         const foundProject = projects.find(project => project.id === projectId)
 
         if (!foundProject) {
@@ -84,7 +67,6 @@ export default function ProjectPage() {
 
       <div className={styles.projectContainer}>
         <div className={styles.columns}>
-          {/* Column 1: Project Name and Subtitle */}
           <div className={styles.column}>
             <h1 className={`${styles.projectName} c131313 fs24`}>{projectData.projectName}</h1>
             {projectData.subtitle && (
@@ -92,11 +74,10 @@ export default function ProjectPage() {
             )}
           </div>
 
-          {/* Column 2: Project Image */}
           <div className={styles.column}>
-            {projectData.imageUrl && (
+            {projectData.imageDetailUrls && (
               <Image
-                src={projectData.imageUrl}
+                src={projectData.imageDetailUrls[0]}
                 alt={projectData.projectName}
                 width={710}
                 height={389}
@@ -105,7 +86,6 @@ export default function ProjectPage() {
             )}
           </div>
 
-          {/* Column 3: Project Details */}
           <div className={styles.column}>
             {Object.entries(projectData.details).map(([key, detail]) => (
               detail && (
