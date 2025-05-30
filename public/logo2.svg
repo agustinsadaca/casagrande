@@ -37,12 +37,11 @@
       stroke-width: 4px;
       }
       /* 🚀 NUEVO: animaciones */
-      .animate-line1{
+      .animate-line1 {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
       animation: draw-line 2.5s ease forwards;
       }
-
       .animate-line2 {
       stroke-dasharray: 1000;
       stroke-dashoffset: 1000;
@@ -60,7 +59,8 @@
     <g id="LOGO">
       <polyline class="cls-4 animate-line1" points="4 168.87 4 4 349.43 4 349.43 48.94" />
       <polyline class="cls-5 animate-line2"
-        points="349.42 126.21 349.42 171.01 505.89 171.01 505.89 83 76.92 83 76.92 171" />
+        points="76.92 171 76.92 83 505.89 83 505.89 171.01 349.42 171.01 349.42 126.21" />
+
     </g>
     <g id="TEXTO">
       <path class="cls-3"
