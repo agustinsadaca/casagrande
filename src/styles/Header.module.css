@@ -24,11 +24,7 @@
 .nav a {
   font-family: 'Unageo Regular', sans-serif;
   margin-left: 150px;
-  text-decoration: none;
-  color: inherit;
   font-size: 21px;
-  transition: color 0.3s ease;
-  color: inherit
 }
 
 .burger {
