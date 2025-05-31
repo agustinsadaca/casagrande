@@ -72,7 +72,7 @@
 
 .columns {
   display: grid;
-  grid-template-columns: 20% 40% 40%;
+  grid-template-columns: 20% 41% 39%;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -84,9 +84,9 @@
 }
 
 .projectImage {
-  width: 100%;
   height: auto;
   object-fit: cover;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -110,6 +110,10 @@
 
   .detailSection {
     padding: 0;
+  }
+
+  .projectImage {
+    margin-left: 0;
   }
 
 }

@@ -22,7 +22,7 @@
     "cookies-next": "5.1.0",
     "dotenv": "16.4.7",
     "elastic-apm-node": "4.11.0",
-    "embla-carousel-autoplay": "8.5.2",
+    "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "8.5.2",
     "i18next": "24.2.1",
     "i18next-browser-languagedetector": "8.0.2",

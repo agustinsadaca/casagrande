@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react'
 export default function Hero() {
   const [logoUrl, setLogoUrl] = useState('/logo.svg')
 
-  // Add a version query parameter to bust cache
   useEffect(() => {
     setLogoUrl(`/logo.svg?v=${Date.now()}`)
   }, [])

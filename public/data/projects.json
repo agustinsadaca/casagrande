@@ -1,10 +1,18 @@
 [
   {
-    "id": "casa-cl",
-    "imageHomeUrls": ["/projects/3_A_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp"],
-    "projectName": "Proyecto Casa CL",
-    "subtitle": "LDA arquitectas",
-    "imageDetailUrls": ["/projects/3_A_LDA_COLOR.webp"],
+    "id": "casa-valdivieso",
+    "imageHomeUrls": [
+      "/projects/1_A_Valeria_Valdivieso__COLOR.webp",
+      "/projects/1_B_Valeria_Valdivieso__COLOR.webp",
+      "/projects/1_C_Valeria_Valdivieso__COLOR.webp"
+    ],
+    "projectName": "Proyecto Casa Valdivieso",
+    "subtitle": "Valeria Valdivieso",
+    "imageDetailUrls": [
+      "/projects/1_A_Valeria_Valdivieso__COLOR.webp",
+      "/projects/1_B_Valeria_Valdivieso__COLOR.webp",
+      "/projects/1_C_Valeria_Valdivieso__COLOR.webp"
+    ],
     "details": {
       "project": {
         "title": "Proyecto",
@@ -30,11 +38,253 @@
     }
   },
   {
-    "id": "casa-cl1",
-    "imageHomeUrls": ["/projects/3_A_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp"],
+    "id": "casa-bonada",
+    "imageHomeUrls": [
+      "/projects/2_A_Mauricio_Bonada__COLOR.webp",
+      "/projects/2_B_Mauricio_Bonada__COLOR.webp",
+      "/projects/2_A_Mauricio_Bonada__COLOR.webp"
+    ],
+    "projectName": "Proyecto Casa Bonada",
+    "subtitle": "Mauricio Bonada",
+    "imageDetailUrls": [
+      "/projects/2_A_Mauricio_Bonada__COLOR.webp",
+      "/projects/2_B_Mauricio_Bonada__COLOR.webp"
+    ],
+    "details": {
+      "project": {
+        "title": "Proyecto",
+        "description": [
+          "Cálculo de estructura",
+          "Instalaciones sanitarias",
+          "Instalaciones de gas",
+          "Dirección técnica estructural"
+        ]
+      },
+      "area": {
+        "title": "Superficie",
+        "description": "225 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
+    }
+  },
+  {
+    "id": "casa-cl",
+    "imageHomeUrls": [
+      "/projects/3_A_LDA_COLOR.webp",
+      "/projects/3_B_LDA_COLOR.webp",
+      "/projects/3_A_LDA_COLOR.webp"
+    ],
     "projectName": "Proyecto Casa CL",
     "subtitle": "LDA arquitectas",
-    "imageDetailUrls": ["/projects/3_A_LDA_BLANCO_NEGRO.webp","/projects/3_B_LDA_BLANCO_NEGRO.webp"],
+    "imageDetailUrls": [
+      "/projects/3_A_LDA_COLOR.webp",
+      "/projects/3_B_LDA_COLOR.webp"
+    ],
+    "details": {
+      "project": {
+        "title": "Proyecto",
+        "description": [
+          "Cálculo de estructura",
+          "Instalaciones sanitarias",
+          "Instalaciones de gas",
+          "Dirección técnica estructural"
+        ]
+      },
+      "area": {
+        "title": "Superficie",
+        "description": "225 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
+    }
+  },
+  {
+    "id": "casa-cuello",
+    "imageHomeUrls": [
+      "/projects/4_A_Emiliano_Cuello__COLOR.webp",
+      "/projects/4_B_Emiliano_Cuello__COLOR.webp",
+      "/projects/4_C_Emiliano_Cuello__COLOR.webp"
+    ],
+    "projectName": "Proyecto Casa Cuello",
+    "subtitle": "Emiliano Cuello",
+    "imageDetailUrls": [
+      "/projects/4_A_Emiliano_Cuello__COLOR.webp",
+      "/projects/4_B_Emiliano_Cuello__COLOR.webp",
+      "/projects/4_C_Emiliano_Cuello__COLOR.webp"
+    ],
+    "details": {
+      "project": {
+        "title": "Proyecto",
+        "description": [
+          "Cálculo de estructura",
+          "Instalaciones sanitarias",
+          "Instalaciones de gas",
+          "Dirección técnica estructural"
+        ]
+      },
+      "area": {
+        "title": "Superficie",
+        "description": "225 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
+    }
+  },
+  {
+    "id": "casa-titos",
+    "imageHomeUrls": [
+      "/projects/5_A_Titos_Tañez_Wolf__COLOR.webp",
+      "/projects/5_B_Titos_Tañez_Wolf__COLOR.webp",
+      "/projects/5_C_Titos_Tañez_Wolf__COLOR.webp"
+    ],
+    "projectName": "Proyecto Casa Titos",
+    "subtitle": "Titos Tañez Wolf",
+    "imageDetailUrls": [
+      "/projects/5_A_Titos_Tañez_Wolf__COLOR.webp",
+      "/projects/5_B_Titos_Tañez_Wolf__COLOR.webp",
+      "/projects/5_C_Titos_Tañez_Wolf__COLOR.webp"
+    ],
+    "details": {
+      "project": {
+        "title": "Proyecto",
+        "description": [
+          "Cálculo de estructura",
+          "Instalaciones sanitarias",
+          "Instalaciones de gas",
+          "Dirección técnica estructural"
+        ]
+      },
+      "area": {
+        "title": "Superficie",
+        "description": "225 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
+    }
+  },
+  {
+    "id": "casa-arcos",
+    "imageHomeUrls": [
+      "/projects/6_A_Arcos___COLOR.webp",
+      "/projects/6_b_Arcos__COLOR.webp",
+      "/projects/6_c_Arcos__COLOR.webp",
+      "/projects/6_D_Arcos__COLOR.webp"
+    ],
+    "projectName": "Proyecto Casa Arcos",
+    "subtitle": "Arcos Arquitectura",
+    "imageDetailUrls": [
+      "/projects/6_A_Arcos___COLOR.webp",
+      "/projects/6_b_Arcos__COLOR.webp",
+      "/projects/6_c_Arcos__COLOR.webp",
+      "/projects/6_D_Arcos__COLOR.webp"
+    ],
+    "details": {
+      "project": {
+        "title": "Proyecto",
+        "description": [
+          "Cálculo de estructura",
+          "Instalaciones sanitarias",
+          "Instalaciones de gas",
+          "Dirección técnica estructural"
+        ]
+      },
+      "area": {
+        "title": "Superficie",
+        "description": "225 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
+    }
+  },
+  {
+    "id": "casa-rico",
+    "imageHomeUrls": [
+      "/projects/7_A_Manuel_Rico__COLOR.webp",
+      "/projects/7_b_Manuel_Rico__COLOR.webp",
+      "/projects/7_C_Manuel_Rico__COLOR.webp",
+      "/projects/7_D_Manuel_Rico__COLOR.webp"
+    ],
+    "projectName": "Proyecto Casa Rico",
+    "subtitle": "Manuel Rico",
+    "imageDetailUrls": [
+      "/projects/7_A_Manuel_Rico__COLOR.webp",
+      "/projects/7_b_Manuel_Rico__COLOR.webp",
+      "/projects/7_C_Manuel_Rico__COLOR.webp",
+      "/projects/7_D_Manuel_Rico__COLOR.webp"
+    ],
+    "details": {
+      "project": {
+        "title": "Proyecto",
+        "description": [
+          "Cálculo de estructura",
+          "Instalaciones sanitarias",
+          "Instalaciones de gas",
+          "Dirección técnica estructural"
+        ]
+      },
+      "area": {
+        "title": "Superficie",
+        "description": "225 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
+    }
+  },
+  {
+    "id": "casa-carleti",
+    "imageHomeUrls": [
+      "/projects/8_A_Eduardo_Carleti__COLOR.webp",
+      "/projects/8_B_Eduardo_Carleti__COLOR.webp",
+      "/projects/8_C_Eduardo_Carleti__COLOR.webp",
+      "/projects/8_D_Eduardo_Carleti__COLOR.webp",
+      "/projects/8_E_Eduardo_Carleti__COLOR.webp"
+    ],
+    "projectName": "Proyecto Casa Carleti",
+    "subtitle": "Eduardo Carleti",
+    "imageDetailUrls": [
+      "/projects/8_A_Eduardo_Carleti__COLOR.webp",
+      "/projects/8_B_Eduardo_Carleti__COLOR.webp",
+      "/projects/8_C_Eduardo_Carleti__COLOR.webp",
+      "/projects/8_D_Eduardo_Carleti__COLOR.webp",
+      "/projects/8_E_Eduardo_Carleti__COLOR.webp"
+    ],
     "details": {
       "project": {
         "title": "Proyecto",

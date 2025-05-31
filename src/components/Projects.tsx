@@ -74,14 +74,14 @@ export default function Projects() {
                 objectFit="cover"
               />
             ) : (
-              project.imageHomeUrls.map((imageUrl, index) => (
+              project.imageHomeUrls.slice(0, 3).map((imageUrl, index) => (
                 <div key={index}>
                   <Image
                     src={imageUrl}
                     alt={`${project.projectName} image ${index + 1}`}
                     width={398}
                     height={398}
-                    objectFit="cover"
+                    className={styles.imageProjects}
                   />
                 </div>
               ))

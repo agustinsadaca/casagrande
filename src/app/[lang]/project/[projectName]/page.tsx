@@ -1,9 +1,11 @@
 'use client'
 
 import styles from '@/styles/Project.module.css'
+import { Carousel } from '@mantine/carousel'
+import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ProjectItem } from '../../../../types/project'
 
 
@@ -13,6 +15,8 @@ export default function ProjectPage() {
   const [error, setError] = useState<string | null>(null)
   const params = useParams()
   const projectId = params.projectName as string
+  const autoplay = useRef(Autoplay({ delay: 5000 }))
+
 
   useEffect(() => {
     const fetchProjectData = async () => {
@@ -75,29 +79,69 @@ export default function ProjectPage() {
           </div>
 
           <div className={styles.column}>
-            {projectData.imageDetailUrls && (
-              <Image
-                src={projectData.imageDetailUrls[0]}
-                alt={projectData.projectName}
-                width={710}
+            {projectData.imageDetailUrls && projectData.imageDetailUrls.length > 0 && (
+              <Carousel
+                withIndicators
+                withControls={false}
                 height={389}
                 className={styles.projectImage}
-              />
+                plugins={[autoplay.current]}
+                onMouseEnter={autoplay.current.stop}
+                onMouseLeave={() => autoplay.current.play()}
+                styles={{
+                  indicators: {
+                    bottom: '1rem',
+                  },
+                  indicator: {
+                    width: 12,
+                    height: 4,
+                    transition: 'width 250ms ease',
+                    backgroundColor: 'white',
+                    '&[data-active]': {
+                      backgroundColor: '#9A9A9A',
+                    }
+                  }
+                }}
+              >
+                {
+                  projectData.imageDetailUrls.map((imageUrl, index) => (
+                    <Carousel.Slide key={index}>
+                      <Image
+                        src={imageUrl}
+                        alt={`${projectData.projectName} - image ${index + 1}`}
+                        width={710}
+                        height={389}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }
+                        }
+                      />
+                    </Carousel.Slide>
+                  ))
+                }
+              </Carousel>
             )}
           </div>
 
           <div className={styles.column}>
             {Object.entries(projectData.details).map(([key, detail]) => (
-              detail && (
-                <div key={key} className={styles.detailSection}>
-                  <h3 className={`c9A9A9A ${styles.detailTitle}`}>{detail.title}</h3>
-                  <p className={`c131313 ${styles.descriptionText}`}>{detail.description}</p>
-                </div>
-              )
+              key === 'project' ?
+                (
+                  <div key={key} className={styles.detailSection}>
+                    <h3 className={`c9A9A9A ${styles.detailTitle}`}>{detail.title}</h3>
+                    {Array.isArray(detail.description) && detail.description.map((description, index) => (
+                      <p key={index} className={`c131313 ${styles.descriptionText}`}>{description}</p>
+                    ))}
+                  </div>
+                )
+                : (
+                  <div key={key} className={styles.detailSection}>
+                    <h3 className={`c9A9A9A ${styles.detailTitle}`}>{detail.title}</h3>
+                    <p className={`c131313 ${styles.descriptionText}`}>{detail.description}</p>
+                  </div>
+                )
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
