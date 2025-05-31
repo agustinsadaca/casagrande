@@ -1,10 +1,12 @@
 'use client'
 
 import styles from '@/styles/Projects.module.css'
+import { Carousel } from '@mantine/carousel'
 import { useMediaQuery } from '@mantine/hooks'
+import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ProjectItem } from '../types/project'
 
 
@@ -14,6 +16,8 @@ export default function Projects() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const isMobile = useMediaQuery('(max-width: 768px)')
+  const autoplay = useRef(Autoplay({ delay: 5000 }))
+
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -66,13 +70,46 @@ export default function Projects() {
             style={{ cursor: 'pointer' }}
           >
             {isMobile ? (
-              <Image
-                src={project.imageHomeUrls[0]}
-                alt={`${project.projectName} image`}
-                width={398}
-                height={398}
-                objectFit="cover"
-              />
+              <Carousel
+                withIndicators
+                withControls={false}
+                height={389}
+                className={styles.projectImage}
+                plugins={[autoplay.current]}
+                onMouseEnter={autoplay.current.stop}
+                onMouseLeave={() => autoplay.current.play()}
+                styles={{
+                  indicators: {
+                    bottom: '1rem',
+                  },
+                  indicator: {
+                    width: 12,
+                    height: 4,
+                    transition: 'width 250ms ease',
+                    backgroundColor: 'white',
+
+                  }
+                }}
+              >
+                {
+                  project.imageHomeUrls.map((imageUrl, index) => (
+                    <Carousel.Slide key={index}>
+                      <Image
+                        src={imageUrl}
+                        alt={`${project.projectName} - image ${index + 1}`}
+                        width={710}
+                        height={389}
+                        className={styles.imageProjects}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          objectFit: 'cover',
+                        }}
+                      />
+                    </Carousel.Slide>
+                  ))
+                }
+              </Carousel>
             ) : (
               project.imageHomeUrls.slice(0, 3).map((imageUrl, index) => (
                 <div key={index}>

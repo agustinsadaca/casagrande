@@ -97,9 +97,6 @@ export default function ProjectPage() {
                     height: 4,
                     transition: 'width 250ms ease',
                     backgroundColor: 'white',
-                    '&[data-active]': {
-                      backgroundColor: '#9A9A9A',
-                    }
                   }
                 }}
               >
