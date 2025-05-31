@@ -27,9 +27,8 @@ export default function Projects() {
         if (!response.ok) {
           throw new Error('Failed to fetch projects data')
         }
-        if (!response.ok) {
-          throw new Error('Failed to fetch projects data')
-        }
+        console.log(response)
+
         const data = await response.json()
 
         setProjects(data)

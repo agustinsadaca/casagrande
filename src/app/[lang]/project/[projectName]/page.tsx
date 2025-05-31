@@ -21,7 +21,8 @@ export default function ProjectPage() {
   useEffect(() => {
     const fetchProjectData = async () => {
       try {
-        const response = await fetch('/data/projects.json')
+        const datestamp = new Date().getTime()
+        const response = await fetch('/data/projects.json?t=' + datestamp)
         if (!response.ok) {
           throw new Error('Failed to fetch projects data')
         }
