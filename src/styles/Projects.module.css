@@ -82,4 +82,8 @@
     width: 100%;
     height: auto;
   }
+
+  .projectsSection {
+    padding: 80px 40px;
+  }
 }

@@ -22,7 +22,11 @@ export default function Projects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('/data/projects.json')
+        const timestamp = new Date().getTime()
+        const response = await fetch(`/data/projects.json?t=${timestamp}`)
+        if (!response.ok) {
+          throw new Error('Failed to fetch projects data')
+        }
         if (!response.ok) {
           throw new Error('Failed to fetch projects data')
         }
