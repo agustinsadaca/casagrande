@@ -2,13 +2,15 @@
 
 import styles from '@/styles/Projects.module.css'
 import { Carousel } from '@mantine/carousel'
-import { useMediaQuery } from '@mantine/hooks'
+import { Box } from '@mantine/core'
+import { useMediaQuery, useWindowScroll } from '@mantine/hooks'
+import { IconArrowUp } from '@tabler/icons-react'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { ProjectItem } from '../types/project'
-
+import { ContactForm } from './ContactForm'
 
 export default function Projects() {
   const router = useRouter()
@@ -17,6 +19,9 @@ export default function Projects() {
   const [error, setError] = useState<string | null>(null)
   const isMobile = useMediaQuery('(max-width: 768px)')
   const autoplay = useRef(Autoplay({ delay: 5000 }))
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const [scroll, scrollTo] = useWindowScroll()
 
 
   useEffect(() => {
@@ -27,8 +32,6 @@ export default function Projects() {
         if (!response.ok) {
           throw new Error('Failed to fetch projects data')
         }
-        console.log(response)
-
         const data = await response.json()
 
         setProjects(data)
@@ -42,6 +45,38 @@ export default function Projects() {
 
     fetchProjects()
   }, [])
+
+  useEffect(() => {
+    const handleHashScroll = () => {
+      const hash = window.location.hash
+
+      if (hash && loading === false) {
+        setTimeout(() => {
+          const id = hash.substring(1)
+          const element = document.getElementById(id)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' })
+          }
+        }, 200)
+      }
+    }
+
+    handleHashScroll()
+
+    window.addEventListener('hashchange', handleHashScroll)
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashScroll)
+    }
+  }, [loading, pathname, searchParams])
+
+
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
 
   const handleClick = (project: ProjectItem) => {
     router.push(`/en/project/${project.id}`)
@@ -129,6 +164,30 @@ export default function Projects() {
           </div>
         ))}
       </div>
+      <Box style={{ marginLeft: isMobile ? '0px' : '150px' }}>
+        <ContactForm />
+      </Box>
+      <Box style={{ display: 'flex', justifyContent: 'center', paddingTop: '120px', marginLeft: isMobile ? '0px' : '150px' }} my="xl">
+        <button
+          onClick={handleScrollToTop}
+          style={{
+            background: 'transparent',
+            border: 'none',
+            color: '#868e96',
+            cursor: 'pointer',
+            padding: isMobile ? '0px' : '10px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: isMobile ? '90px' : '130px',
+            height: isMobile ? '90px' : '130px'
+          }}
+          aria-label="Scroll to top"
+        >
+          <IconArrowUp size={120} stroke={.6} />
+        </button>
+      </Box>
+
     </section>
   )
 }

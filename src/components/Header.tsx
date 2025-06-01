@@ -4,6 +4,7 @@ import { Burger } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { useLocale } from 'next-intl'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 export default function Header() {
@@ -11,9 +12,27 @@ export default function Header() {
   const [opened, setOpened] = useState(false)
   const isMobile = useMediaQuery('(max-width: 768px)')
   const locale = useLocale()
+  const router = useRouter()
 
   const toggleBurger = () => {
     setOpened((o) => !o)
+  }
+
+  const handleNavClick = (sectionId, e) => {
+    e.preventDefault()
+    setOpened(false)
+
+    const isHomePage = window.location.pathname === `/${locale}` ||
+      window.location.pathname === `/${locale}/`
+
+    if (isHomePage) {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' })
+      }
+    } else {
+      router.push(`/${locale}/#${sectionId}`)
+    }
   }
 
   return (
@@ -29,9 +48,9 @@ export default function Header() {
         />
       )}
       <nav className={`${styles.nav} ${opened ? styles.opened : ''}`}>
-        <a href={`/${locale}#projects`}>PROYECTOS</a>
-        <a href={`/${locale}#office`}>OFICINA</a>
-        <a href={`/${locale}#contact`}>CONTACTO</a>
+        <a href={`#projects`} onClick={(e) => handleNavClick('projects', e)}>PROYECTOS</a>
+        <a href={`#office`} onClick={(e) => handleNavClick('office', e)}>OFICINA</a>
+        <a href={`#contact`} onClick={(e) => handleNavClick('contact', e)}>CONTACTO</a>
       </nav>
     </header>
   )

@@ -1,5 +1,12 @@
 User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/chunks/
 
-Disallow: 
-Disallow: /*?utm=*
-Sitemap: 
+# Allow Google images to crawl all images
+User-agent: Googlebot-Image
+Allow: /projects/
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml

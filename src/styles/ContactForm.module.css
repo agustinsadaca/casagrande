@@ -1,0 +1,67 @@
+.formContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Unageo Regular', sans-serif;
+}
+
+.contactForm {
+  padding-top: 200px;
+}
+
+.title {
+  font-family: 'Unageo Regular', sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.nameSection {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100% !important;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: 'Unageo Regular', sans-serif;
+}
+
+.inputGroup {
+  margin-bottom: 1rem;
+}
+
+.submitButton {
+  margin-top: 2rem;
+  font-family: 'Unageo Regular', sans-serif;
+}
+
+.formField {
+  font-family: 'Unageo Regular', sans-serif;
+}
+
+.formField input,
+.formField textarea {
+  font-family: 'Unageo Regular', sans-serif;
+}
+
+.inputField {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .inputRow {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .inputField {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .formContainer {
+    padding: 1rem;
+  }
+}

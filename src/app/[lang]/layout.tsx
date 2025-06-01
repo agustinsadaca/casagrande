@@ -1,5 +1,7 @@
 import "@mantine/carousel/styles.css"
+import { createTheme, MantineProvider } from '@mantine/core'
 import "@mantine/core/styles.css"
+import { Notifications } from '@mantine/notifications'
 import { Metadata } from "next"
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
@@ -49,6 +51,14 @@ export default async function LocaleLayout({ children }: { children: React.React
   const locale = await getLocale()
   const messages = await getMessages()
 
+  const theme = createTheme({
+    fontFamily: '"Leorio", sans-serif',
+    fontFamilyMonospace: 'Monaco, Courier, monospace',
+    headings: {
+      fontFamily: '"Unageo Regular", sans-serif',
+      fontWeight: '400'
+    }
+  })
 
 
   return (
@@ -58,11 +68,25 @@ export default async function LocaleLayout({ children }: { children: React.React
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <ClientView >
-            <Header />
-            {children}
-            <Footer />
-          </ClientView>
+          <MantineProvider forceColorScheme='light' theme={theme} withCssVariables>
+            <Notifications
+              position="top-right"
+              zIndex={1000}
+              containerWidth={400}
+              style={{
+                position: 'fixed',
+                top: '200px',
+                left: '85%',
+                transform: 'translateX(-50%)',
+                maxWidth: '100%'
+              }}
+            />
+            <ClientView >
+              <Header />
+              {children}
+              <Footer />
+            </ClientView>
+          </MantineProvider>
         </NextIntlClientProvider>
       </body>
     </html >

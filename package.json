@@ -16,6 +16,7 @@
     "@mantine/core": "7.16.1",
     "@mantine/form": "7.16.1",
     "@mantine/hooks": "7.16.1",
+    "@mantine/notifications": "^7.16.1",
     "@next/third-parties": "15.1.5",
     "@tabler/icons-react": "3.28.1",
     "bowser": "2.11.0",
