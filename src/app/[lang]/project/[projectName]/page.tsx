@@ -2,6 +2,7 @@
 
 import styles from '@/styles/Project.module.css'
 import { Carousel } from '@mantine/carousel'
+import { useMediaQuery } from '@mantine/hooks'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
@@ -16,6 +17,7 @@ export default function ProjectPage() {
   const params = useParams()
   const projectId = params.projectName as string
   const autoplay = useRef(Autoplay({ delay: 5000 }))
+  const isMobile = useMediaQuery('(max-width: 768px)')
 
 
   useEffect(() => {
@@ -79,12 +81,11 @@ export default function ProjectPage() {
             )}
           </div>
 
-          <div className={styles.column}>
+          <div className={`${styles.column} ${styles.carouselSection}`}>
             {projectData.imageDetailUrls && projectData.imageDetailUrls.length > 0 && (
               <Carousel
                 withIndicators
                 withControls={false}
-                height={389}
                 className={styles.projectImage}
                 plugins={[autoplay.current]}
                 onMouseEnter={autoplay.current.stop}
@@ -98,6 +99,13 @@ export default function ProjectPage() {
                     height: 4,
                     transition: 'width 250ms ease',
                     backgroundColor: 'white',
+                  },
+                  slide: {
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: 'auto',
+                    maxHeight: '389px'
                   }
                 }}
               >
@@ -109,7 +117,8 @@ export default function ProjectPage() {
                         alt={`${projectData.projectName} - image ${index + 1}`}
                         width={710}
                         height={389}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }
+                        className={styles.imageProjects}
+                        style={{ width: '100%', height: '100%', objectFit: 'contain' }
                         }
                       />
                     </Carousel.Slide>

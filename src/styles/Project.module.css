@@ -89,7 +89,12 @@
   margin-left: 20px;
 }
 
+
 @media screen and (max-width: 768px) {
+  .imageProjects {
+    max-height: 210px;
+  }
+
   .columns {
     grid-template-columns: 1fr;
   }

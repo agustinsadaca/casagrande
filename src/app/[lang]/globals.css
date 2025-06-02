@@ -21,6 +21,11 @@
 
 html body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
 }
 
 body {
@@ -94,40 +99,38 @@ body {
 
 /* Start font size */
 .fs12 {
-  font-size: 12px
+  font-size: calc(0.5vw + 8px);
+  /* Escala desde ~12px en móviles hasta ~18px en 2K */
 }
 
 .fs14 {
-  font-size: 14px
+  font-size: calc(0.5vw + 10px);
+  /* Escala desde ~14px en móviles hasta ~20px en 2K */
 }
-
-.fs15 {
-  font-size: 15px
-}
-
 
 .fs16 {
-  font-size: 16px;
+  font-size: calc(0.5vw + 12px);
+  /* Escala desde ~16px en móviles hasta ~22px en 2K */
 }
 
 .fs18 {
-  font-size: 18px;
-}
-
-.fs21 {
-  font-size: 21px;
+  font-size: calc(0.6vw + 12px);
+  /* Escala desde ~18px en móviles hasta ~27px en 2K */
 }
 
 .fs24 {
-  font-size: 24px;
+  font-size: calc(0.8vw + 16px);
+  /* Escala desde ~24px en móviles hasta ~36px en 2K */
 }
 
 .fs30 {
-  font-size: 30px;
+  font-size: calc(1vw + 20px);
+  /* Escala desde ~30px en móviles hasta ~46px en 2K */
 }
 
 .fs52 {
-  font-size: 52px;
+  font-size: calc(1.5vw + 36px);
+  /* Escala desde ~52px en móviles hasta ~74px en 2K */
 }
 
 /* End font size */
