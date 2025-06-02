@@ -99,38 +99,43 @@ body {
 
 /* Start font size */
 .fs12 {
-  font-size: calc(0.5vw + 8px);
-  /* Escala desde ~12px en móviles hasta ~18px en 2K */
+  font-size: calc(0.25vw + 7.2px);
+  /* 12px en 1080p */
 }
 
 .fs14 {
-  font-size: calc(0.5vw + 10px);
-  /* Escala desde ~14px en móviles hasta ~20px en 2K */
+  font-size: calc(0.3vw + 8.24px);
+  /* 14px en 1080p */
 }
 
 .fs16 {
-  font-size: calc(0.5vw + 12px);
-  /* Escala desde ~16px en móviles hasta ~22px en 2K */
+  font-size: calc(0.33vw + 9.66px);
+  /* 16px en 1080p */
 }
 
 .fs18 {
-  font-size: calc(0.6vw + 12px);
-  /* Escala desde ~18px en móviles hasta ~27px en 2K */
+  font-size: calc(0.37vw + 10.9px);
+  /* 18px en 1080p */
+}
+
+.fs21 {
+  font-size: calc(0.438vw + 12.6px);
+  /* 21px en 1080p */
 }
 
 .fs24 {
-  font-size: calc(0.8vw + 16px);
-  /* Escala desde ~24px en móviles hasta ~36px en 2K */
+  font-size: calc(0.5vw + 14.4px);
+  /* 24px en 1080p */
 }
 
 .fs30 {
-  font-size: calc(1vw + 20px);
-  /* Escala desde ~30px en móviles hasta ~46px en 2K */
+  font-size: calc(0.625vw + 18px);
+  /* 30px en 1080p */
 }
 
 .fs52 {
-  font-size: calc(1.5vw + 36px);
-  /* Escala desde ~52px en móviles hasta ~74px en 2K */
+  font-size: calc(1.08vw + 31.25px);
+  /* 52px en 1080p */
 }
 
 /* End font size */
