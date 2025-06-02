@@ -2,9 +2,9 @@
   {
     "id": "casa-valdivieso",
     "imageHomeUrls": [
-      "/projects/1_A_Valeria_Valdivieso__COLOR.webp",
-      "/projects/1_B_Valeria_Valdivieso__COLOR.webp",
-      "/projects/1_C_Valeria_Valdivieso__COLOR.webp"
+      "/projects/398x398/1_A_Valeria Valdivieso_398.webp",
+      "/projects/398x398/1_B_Valeria Valdivieso_398.webp",
+      "/projects/398x398/1_C_Valeria Valdivieso_398.webp"
     ],
     "projectName": "Proyecto Casa Valdivieso",
     "subtitle": "Valeria Valdivieso",
@@ -40,9 +40,9 @@
   {
     "id": "casa-bonada",
     "imageHomeUrls": [
-      "/projects/2_A_Mauricio_Bonada__COLOR.webp",
-      "/projects/2_B_Mauricio_Bonada__COLOR.webp",
-      "/projects/2_A_Mauricio_Bonada__COLOR.webp"
+      "/projects/398x398/2_A_Mauricio Bonada_398.webp",
+      "/projects/398x398/2_B_Mauricio Bonada_398.webp",
+      "/projects/398x398/2_A_Mauricio Bonada_398.webp"
     ],
     "projectName": "Proyecto Casa Bonada",
     "subtitle": "Mauricio Bonada",
@@ -77,9 +77,9 @@
   {
     "id": "casa-cl",
     "imageHomeUrls": [
-      "/projects/3_A_LDA_COLOR.webp",
-      "/projects/3_B_LDA_COLOR.webp",
-      "/projects/3_A_LDA_COLOR.webp"
+      "/projects/398x398/3_A_LDA_398.webp",
+      "/projects/398x398/3_B_LDA_398.webp",
+      "/projects/398x398/3_A_LDA_398.webp"
     ],
     "projectName": "Proyecto Casa CL",
     "subtitle": "LDA arquitectas",
@@ -114,9 +114,9 @@
   {
     "id": "casa-cuello",
     "imageHomeUrls": [
-      "/projects/4_A_Emiliano_Cuello__COLOR.webp",
-      "/projects/4_B_Emiliano_Cuello__COLOR.webp",
-      "/projects/4_C_Emiliano_Cuello__COLOR.webp"
+      "/projects/398x398/4_A_Emiliano Cuello_398.webp",
+      "/projects/398x398/4_B_Emiliano Cuello_398.webp",
+      "/projects/398x398/4_C_Emiliano Cuello_398.webp"
     ],
     "projectName": "Proyecto Casa Cuello",
     "subtitle": "Emiliano Cuello",
@@ -152,9 +152,9 @@
   {
     "id": "casa-titos",
     "imageHomeUrls": [
-      "/projects/5_A_Titos_Tañez_Wolf__COLOR.webp",
-      "/projects/5_B_Titos_Tañez_Wolf__COLOR.webp",
-      "/projects/5_C_Titos_Tañez_Wolf__COLOR.webp"
+      "/projects/398x398/5_A_Titos_Tañez_Wolf_398.webp",
+      "/projects/398x398/5_B_Titos_Tañez_Wolf_398.webp",
+      "/projects/398x398/5_C_Titos_Tañez_Wolf_398.webp"
     ],
     "projectName": "Proyecto Casa Titos",
     "subtitle": "Titos Tañez Wolf",
@@ -190,10 +190,10 @@
   {
     "id": "casa-arcos",
     "imageHomeUrls": [
-      "/projects/6_A_Arcos___COLOR.webp",
-      "/projects/6_b_Arcos__COLOR.webp",
-      "/projects/6_c_Arcos__COLOR.webp",
-      "/projects/6_D_Arcos__COLOR.webp"
+      "/projects/398x398/6_A_Arcos_398.webp",
+      "/projects/398x398/6_B_Arcos_398.webp",
+      "/projects/398x398/6_C_Arcos_398.webp",
+      "/projects/398x398/6_D_Arcos_398.webp"
     ],
     "projectName": "Proyecto Casa Arcos",
     "subtitle": "Arcos Arquitectura",
@@ -230,10 +230,9 @@
   {
     "id": "casa-rico",
     "imageHomeUrls": [
-      "/projects/7_A_Manuel_Rico__COLOR.webp",
-      "/projects/7_b_Manuel_Rico__COLOR.webp",
-      "/projects/7_C_Manuel_Rico__COLOR.webp",
-      "/projects/7_D_Manuel_Rico__COLOR.webp"
+      "/projects/398x398/7_A_Manuel Rico_398.webp",
+      "/projects/398x398/7_B_Manuel Rico_398.webp",
+      "/projects/398x398/7_C_Manuel Rico_398.webp"
     ],
     "projectName": "Proyecto Casa Rico",
     "subtitle": "Manuel Rico",
@@ -270,11 +269,9 @@
   {
     "id": "casa-carleti",
     "imageHomeUrls": [
-      "/projects/8_A_Eduardo_Carleti__COLOR.webp",
-      "/projects/8_B_Eduardo_Carleti__COLOR.webp",
-      "/projects/8_C_Eduardo_Carleti__COLOR.webp",
-      "/projects/8_D_Eduardo_Carleti__COLOR.webp",
-      "/projects/8_E_Eduardo_Carleti__COLOR.webp"
+      "/projects/398x398/8_A_Eduardo Carleti_398.webp",
+      "/projects/398x398/8_B_Eduardo Carleti_398.webp",
+      "/projects/398x398/8_C_Eduardo Carleti_398.webp"
     ],
     "projectName": "Proyecto Casa Carleti",
     "subtitle": "Eduardo Carleti",

@@ -8,7 +8,10 @@
 
 .projectsSection {
   padding: 80px 70px;
-  margin: 0 auto;
+  margin: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .sectionTitle {
@@ -19,8 +22,6 @@
 }
 
 .imageProjects {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
@@ -35,14 +36,14 @@
   text-decoration: none;
   cursor: pointer;
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  gap: 100px;
+  width: 100%;
   margin-bottom: 150px;
 }
 
 .projectsGrid {
-  margin-left: 150px;
+  margin-left: 230px;
 }
 
 .projectTitle {
@@ -84,6 +85,10 @@
   }
 
   .projectsSection {
-    padding: 80px 40px;
+    padding: 80px 20px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 }
