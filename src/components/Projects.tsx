@@ -157,6 +157,8 @@ export default function Projects() {
                     width={398}
                     height={398}
                     className={styles.imageProjects}
+                    priority={index === 0}
+                    loading={index === 0 ? "eager" : "lazy"}
                   />
                 </div>
               ))
