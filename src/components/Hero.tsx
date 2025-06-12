@@ -32,7 +32,7 @@ export default function Hero() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: hero,
-        start: '-70px top',
+        start: '-100px top',
         end: '+=300px',
         scrub: true,
         pin: true,
