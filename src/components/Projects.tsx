@@ -96,9 +96,6 @@ export default function Projects() {
 
   return (
     <section id="projects" className={styles.projectsSection}>
-      {!isMobile && (<div className={styles.projectsLogoImage}>
-        <Image src="/logo.svg" alt="logo" className={styles.image} width={180} height={120} />
-      </div>)}
       <div className={styles.projectsGrid}>
         {projects.map((project) => (
           <div

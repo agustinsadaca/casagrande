@@ -1,47 +1,76 @@
 .hero {
+  position: relative;
   width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  background-color: #fbfbfb;
-  margin-bottom: 150px;
+  padding-top: 200px;
+}
+
+.logoWrapper {
+  position: absolute;
+  z-index: 100;
+  will-change: transform, top, left, width, height;
 }
 
 .image {
-  display: block;
-  margin: 180px auto 0;
-  max-width: 100%;
-  height: auto;
-  width: 500px;
-  height: auto;
-  object-fit: cover;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .button {
-  display: block;
-  margin: 0px auto;
+  margin-top: 40px;
   background-color: #E7E7E7;
   color: black;
   border: none;
   padding: 5px 30px;
   cursor: pointer;
   border-radius: 50px;
-  margin-top: 130px;
+  z-index: 10;
+  position: relative;
 }
 
+.logoStickyWrapper {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  will-change: transform, width, height, top, left;
+  transition: all 0.3s ease;
+}
+
+.logoStickyWrapper.sticky {
+  position: fixed !important;
+  top: 20px;
+  left: 20px;
+  transform: none;
+  width: 180px;
+  height: 120px;
+  z-index: 999;
+}
+
+
 @media screen and (max-width: 768px) {
-  .image {
-    width: 50%;
-    margin-top: 80px;
+  .hero {
+    padding-top: 150px;
   }
 
-  .hero {
-    padding: 120px 0 200px;
-    margin: 0;
+  .logoWrapper {
+    width: 300px !important;
+    height: 200px !important;
   }
 
   .button {
-    padding: 5px 20px;
-    margin: 60px auto;
-    font-size: 20px;
+    margin-top: 80px;
   }
-
 }
