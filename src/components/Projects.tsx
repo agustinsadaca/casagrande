@@ -3,9 +3,10 @@
 import styles from '@/styles/Projects.module.css'
 import { Carousel } from '@mantine/carousel'
 import { Box } from '@mantine/core'
-import { useMediaQuery, useWindowScroll } from '@mantine/hooks'
+import { useMediaQuery } from '@mantine/hooks'
 import { IconArrowUp } from '@tabler/icons-react'
 import Autoplay from 'embla-carousel-autoplay'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
@@ -21,8 +22,7 @@ export default function Projects() {
   const autoplay = useRef(Autoplay({ delay: 5000 }))
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const [scroll, scrollTo] = useWindowScroll()
-
+  const [hoveredRow, setHoveredRow] = useState<number | null>(null)
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -33,7 +33,6 @@ export default function Projects() {
           throw new Error('Failed to fetch projects data')
         }
         const data = await response.json()
-
         setProjects(data)
       } catch (err) {
         console.error('Error loading projects:', err)
@@ -62,14 +61,12 @@ export default function Projects() {
     }
 
     handleHashScroll()
-
     window.addEventListener('hashchange', handleHashScroll)
 
     return () => {
       window.removeEventListener('hashchange', handleHashScroll)
     }
   }, [loading, pathname, searchParams])
-
 
   const handleScrollToTop = () => {
     window.scrollTo({
@@ -80,6 +77,14 @@ export default function Projects() {
 
   const handleClick = (project: ProjectItem) => {
     router.push(`/en/project/${project.id}`)
+  }
+
+  const handleRowHoverStart = (index: number) => {
+    setHoveredRow(index)
+  }
+
+  const handleRowHoverEnd = () => {
+    setHoveredRow(null)
   }
 
   if (loading) {
@@ -96,11 +101,13 @@ export default function Projects() {
 
   return (
     <section id="projects" className={styles.projectsSection}>
-      {!isMobile && (<div className={styles.projectsLogoImage}>
-        <Image src="/logo.svg" alt="logo" className={styles.image} width={180} height={120} />
-      </div>)}
+      {!isMobile && (
+        <div className={styles.projectsLogoImage}>
+          <Image src="/logo.svg" alt="logo" className={styles.image} width={180} height={120} />
+        </div>
+      )}
       <div className={styles.projectsGrid}>
-        {projects.map((project) => (
+        {projects.map((project, index) => (
           <div
             key={project.id}
             onClick={() => handleClick(project)}
@@ -125,43 +132,60 @@ export default function Projects() {
                     height: 4,
                     transition: 'width 250ms ease',
                     backgroundColor: 'white',
-
                   }
                 }}
               >
-                {
-                  project.imageHomeUrls.map((imageUrl, index) => (
-                    <Carousel.Slide key={index}>
-                      <Image
-                        src={imageUrl}
-                        alt={`${project.projectName} - image ${index + 1}`}
-                        width={710}
-                        height={389}
-                        className={styles.imageProjects}
-                        style={{
-                          width: '100%',
-                          height: '100%',
-                          objectFit: 'cover',
-                        }}
-                      />
-                    </Carousel.Slide>
-                  ))
-                }
+                {project.imageHomeUrls.map((imageUrl, index) => (
+                  <Carousel.Slide key={index}>
+                    <Image
+                      src={imageUrl}
+                      alt={`${project.projectName} - image ${index + 1}`}
+                      width={710}
+                      height={389}
+                      className={styles.imageProjects}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                      }}
+                    />
+                  </Carousel.Slide>
+                ))}
               </Carousel>
             ) : (
-              project.imageHomeUrls.slice(0, 3).map((imageUrl, index) => (
-                <div key={index}>
-                  <Image
-                    src={imageUrl}
-                    alt={`${project.projectName} image ${index + 1}`}
-                    width={398}
-                    height={398}
-                    className={styles.imageProjects}
-                    priority={index === 0}
-                    loading={index === 0 ? "eager" : "lazy"}
-                  />
-                </div>
-              ))
+              <div
+                className={styles.imageRow}
+                onMouseEnter={() => setHoveredRow(index)}
+                onMouseLeave={() => setHoveredRow(null)}
+              >
+                {project.imageHomeUrls.slice(0, 3).map((imageUrl, imgIndex) => (
+                  <div key={imgIndex} className={styles.imageContainer}> {/* Changed class name */}
+                    <div className={styles.imageWrapper}>
+                      <Image
+                        src={imageUrl}
+                        alt={`${project.projectName} image ${imgIndex + 1}`}
+                        width={398}
+                        height={398}
+                        className={styles.imageProjects}
+                        priority={imgIndex === 0}
+                        loading={imgIndex === 0 ? 'eager' : 'lazy'}
+                      />
+                      <motion.div
+                        className={styles.overlayContainer}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: hoveredRow === index ? 1 : 0 }}
+                        transition={{ duration: 0.4, ease: 'easeOut' }}
+                      >
+                        {imgIndex === 0 && (
+                          <h2 className={`fs16 ${styles.overlayText}`}>
+                            {project.projectName.toUpperCase()}
+                          </h2>
+                        )}
+                      </motion.div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             )}
           </div>
         ))}
