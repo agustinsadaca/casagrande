@@ -126,37 +126,42 @@ export default function Projects() {
             style={{ cursor: 'pointer' }}
           >
             {isMobile ? (
-              <Carousel
-                withIndicators
-                withControls={false}
-                height={389}
-                plugins={[autoplay.current]}
-                onMouseEnter={autoplay.current.stop}
-                onMouseLeave={() => autoplay.current.play()}
-                styles={{
-                  indicators: {
-                    bottom: '1rem',
-                  },
-                  indicator: {
-                    width: 12,
-                    height: 4,
-                    transition: 'width 250ms ease',
-                    backgroundColor: 'white',
-                  }
-                }}
-              >
-                {project.imageHomeUrls.map((imageUrl, index) => (
-                  <Carousel.Slide key={index}>
-                    <Image
-                      src={imageUrl}
-                      alt={`${project.projectName} - image ${index + 1}`}
-                      width={389}
-                      height={389}
-                      className={styles.imageProjects}
-                    />
-                  </Carousel.Slide>
-                ))}
-              </Carousel>
+              <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+                <Carousel
+                  withIndicators
+                  withControls={false}
+                  height={389}
+                  plugins={[autoplay.current]}
+                  onMouseEnter={autoplay.current.stop}
+                  onMouseLeave={() => autoplay.current.play()}
+                  styles={{
+                    root: {
+                      width: '389px'
+                    },
+                    indicators: {
+                      bottom: '1rem',
+                    },
+                    indicator: {
+                      width: 12,
+                      height: 4,
+                      transition: 'width 250ms ease',
+                      backgroundColor: 'white',
+                    }
+                  }}
+                >
+                  {project.imageHomeUrls.map((imageUrl, index) => (
+                    <Carousel.Slide key={index}>
+                      <Image
+                        src={imageUrl}
+                        alt={`${project.projectName} - image ${index + 1}`}
+                        width={389}
+                        height={389}
+                        className={styles.imageProjects}
+                      />
+                    </Carousel.Slide>
+                  ))}
+                </Carousel>
+              </div>
             ) : (
               <div
                 className={styles.imageRow}
@@ -197,6 +202,6 @@ export default function Projects() {
       </div>
 
 
-    </section>
+    </section >
   )
 }

@@ -1,6 +1,6 @@
 .imageRow {
   display: flex;
-  gap: 85px;
+  gap: 120px;
   position: relative;
   width: 100%;
 }
