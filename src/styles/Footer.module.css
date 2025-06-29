@@ -12,3 +12,12 @@
   z-index: 10;
   margin-top: auto;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    width: auto;
+    margin-top: 0;
+    padding: 0;
+    height: auto;
+  }
+}

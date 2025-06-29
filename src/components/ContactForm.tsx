@@ -47,10 +47,8 @@ export function ContactForm() {
   const handleSubmit = async (values: FormValues) => {
     setLoading(true)
     try {
-      // Aquí iría la lógica para enviar el formulario
       console.log(values)
 
-      // Simular envío
       await new Promise(resolve => setTimeout(resolve, 1000))
 
       notifications.show({
@@ -86,7 +84,6 @@ export function ContactForm() {
         </Text>
 
         <form onSubmit={form.onSubmit(handleSubmit)}>
-          {/* First row: Nombre y Apellido */}
           <div className={`${styles.inputRow} ${styles.nameSection}`}>
             <div className={styles.inputField}>
               <TextInput

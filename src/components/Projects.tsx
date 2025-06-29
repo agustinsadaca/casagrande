@@ -2,23 +2,20 @@
 
 import styles from '@/styles/Projects.module.css'
 import { Carousel } from '@mantine/carousel'
-import { Box } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
-import { IconArrowUp } from '@tabler/icons-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { ProjectItem } from '../types/project'
-import { ContactForm } from './ContactForm'
 
 export default function Projects() {
   const router = useRouter()
   const [projects, setProjects] = useState<ProjectItem[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const isMobile = useMediaQuery('(max-width: 768px)')
+  const isMobile = useMediaQuery('(max-width:  1024px)')
   const autoplay = useRef(Autoplay({ delay: 5000 }))
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -89,13 +86,6 @@ export default function Projects() {
   }, [])
 
 
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  }
-
   const handleClick = (project: ProjectItem) => {
     sessionStorage.setItem('projectsScrollPosition', window.scrollY.toString())
     router.push(`/en/project/${project.id}`)
@@ -140,7 +130,6 @@ export default function Projects() {
                 withIndicators
                 withControls={false}
                 height={389}
-                className={styles.projectImage}
                 plugins={[autoplay.current]}
                 onMouseEnter={autoplay.current.stop}
                 onMouseLeave={() => autoplay.current.play()}
@@ -161,14 +150,9 @@ export default function Projects() {
                     <Image
                       src={imageUrl}
                       alt={`${project.projectName} - image ${index + 1}`}
-                      width={710}
+                      width={389}
                       height={389}
                       className={styles.imageProjects}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                      }}
                     />
                   </Carousel.Slide>
                 ))}
@@ -185,9 +169,9 @@ export default function Projects() {
                       <Image
                         src={imageUrl}
                         alt={`${project.projectName} image ${imgIndex + 1}`}
+                        className={styles.imageProjects}
                         width={398}
                         height={398}
-                        className={styles.imageProjects}
                         priority={imgIndex === 0}
                         loading={imgIndex === 0 ? 'eager' : 'lazy'}
                       />
@@ -211,29 +195,7 @@ export default function Projects() {
           </div>
         ))}
       </div>
-      <Box style={{ marginLeft: isMobile ? '0px' : '150px' }}>
-        <ContactForm />
-      </Box>
-      <Box style={{ display: 'flex', justifyContent: 'center', paddingTop: '120px', marginLeft: isMobile ? '0px' : '150px' }} my="xl">
-        <button
-          onClick={handleScrollToTop}
-          style={{
-            background: 'transparent',
-            border: 'none',
-            color: '#868e96',
-            cursor: 'pointer',
-            padding: isMobile ? '0px' : '10px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: isMobile ? '90px' : '130px',
-            height: isMobile ? '90px' : '130px'
-          }}
-          aria-label="Scroll to top"
-        >
-          <IconArrowUp size={120} stroke={.6} />
-        </button>
-      </Box>
+
 
     </section>
   )
