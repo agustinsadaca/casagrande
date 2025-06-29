@@ -1,6 +1,7 @@
 [
   {
     "id": "casa-mdt",
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/1_A_Valeria Valdivieso_398.webp",
       "/projects/398x398/1_B_Valeria Valdivieso_398.webp",
@@ -39,6 +40,7 @@
   },
   {
     "id": "casa-bonada",
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/2_A_Mauricio Bonada_398.webp",
       "/projects/398x398/2_B_Mauricio Bonada_398.webp",
@@ -76,6 +78,7 @@
   },
   {
     "id": "casa-cl",
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/3_A_LDA_398.webp",
       "/projects/398x398/3_B_LDA_398.webp",
@@ -113,6 +116,7 @@
   },
   {
     "id": "casa-cuello",
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/4_A_Emiliano Cuello_398.webp",
       "/projects/398x398/4_B_Emiliano Cuello_398.webp",
@@ -151,6 +155,7 @@
   },
   {
     "id": "casa-titos",
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/5_A_Titos_Tañez_Wolf_398.webp",
       "/projects/398x398/5_B_Titos_Tañez_Wolf_398.webp",
@@ -189,6 +194,7 @@
   },
   {
     "id": "casa-arcos",
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/6_A_Arcos_398.webp",
       "/projects/398x398/6_B_Arcos_398.webp",
@@ -229,6 +235,7 @@
   },
   {
     "id": "casa-rico",
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/7_A_Manuel Rico_398.webp",
       "/projects/398x398/7_B_Manuel Rico_398.webp",
@@ -268,6 +275,7 @@
   },
   {
     "id": "casa-carleti",
+    "visible": false,
     "imageHomeUrls": [
       "/projects/398x398/8_A_Eduardo Carleti_398.webp",
       "/projects/398x398/8_B_Eduardo Carleti_398.webp",
