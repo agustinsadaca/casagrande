@@ -48,7 +48,7 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer className={styles.footer} style={{ paddingLeft: isHomePage && !isMobile ? '180px' : '0' }}>
+    <footer className={styles.footer} style={{ paddingLeft: isHomePage && !isMobile ? '180px' : 'auto' }}>
       <div style={{
         display: 'flex',
         justifyContent: 'center',
