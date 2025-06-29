@@ -49,6 +49,12 @@ export default function ProjectPage() {
   }, [projectId])
 
 
+  useEffect(() => {
+    return () => {
+      sessionStorage.setItem('comingFromProject', 'true')
+    }
+  }, [])
+
   if (loading) {
     return <div className={styles.loading}>Cargando proyecto...</div>
   }

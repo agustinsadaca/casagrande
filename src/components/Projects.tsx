@@ -68,6 +68,27 @@ export default function Projects() {
     }
   }, [loading, pathname, searchParams])
 
+  useEffect(() => {
+    const comingFromProject = sessionStorage.getItem('comingFromProject')
+
+    if (comingFromProject) {
+      sessionStorage.removeItem('comingFromProject')
+
+      const scrollPosition = sessionStorage.getItem('projectsScrollPosition')
+      console.log("Retrieved scroll position:", scrollPosition)
+
+      if (scrollPosition) {
+        setTimeout(() => {
+          window.scrollTo({
+            top: parseInt(scrollPosition)
+          })
+          console.log("Scrolled to position:", scrollPosition)
+        }, 100)
+      }
+    }
+  }, [])
+
+
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -76,9 +97,9 @@ export default function Projects() {
   }
 
   const handleClick = (project: ProjectItem) => {
+    sessionStorage.setItem('projectsScrollPosition', window.scrollY.toString())
     router.push(`/en/project/${project.id}`)
   }
-
   const handleRowHoverStart = (index: number) => {
     setHoveredRow(index)
   }
@@ -159,7 +180,7 @@ export default function Projects() {
                 onMouseLeave={() => setHoveredRow(null)}
               >
                 {project.imageHomeUrls.slice(0, 3).map((imageUrl, imgIndex) => (
-                  <div key={imgIndex} className={styles.imageContainer}> {/* Changed class name */}
+                  <div key={imgIndex} className={styles.imageContainer}>
                     <div className={styles.imageWrapper}>
                       <Image
                         src={imageUrl}
