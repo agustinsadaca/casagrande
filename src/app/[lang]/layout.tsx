@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description:
       "Oficina tecnica",
     url: "http://localhost:3000",
-    siteName: "WH1",
+    siteName: "casa grande",
     images: [
       {
         url: "http://localhost:3000",
