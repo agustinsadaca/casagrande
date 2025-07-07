@@ -53,7 +53,7 @@ export default async function LocaleLayout({ children }: { children: React.React
   const messages = await getMessages()
 
   const theme = createTheme({
-    fontFamily: '"Leorio", sans-serif',
+    fontFamily: '"Walkway SemiBold", sans-serif',
     fontFamilyMonospace: 'Monaco, Courier, monospace',
     headings: {
       fontFamily: '"Unageo Regular", sans-serif',

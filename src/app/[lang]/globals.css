@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Leorio";
-  src: url("/fonts/Leorio.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "Walkway SemiBold";
+  src: url("/fonts/Walkway SemiBold.ttf") format("truetype");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -137,6 +137,11 @@ body {
   /* 30px en 1080p */
 }
 
+.fs36 {
+  font-size: calc(0.75vw + 21.6px);
+  /* 36px en 1080p */
+}
+
 .fs52 {
   font-size: calc(1.08vw + 31.25px);
   /* 52px en 1080p */
@@ -165,7 +170,7 @@ div,
 a,
 span {
   font-display: swap;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 a {

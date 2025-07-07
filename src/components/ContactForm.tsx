@@ -3,58 +3,63 @@
 import styles from '@/styles/ContactForm.module.css'
 import {
   Button,
-  Paper,
+  Grid,
   Text,
   TextInput,
   Textarea,
   Title
 } from '@mantine/core'
 import { useForm } from '@mantine/form'
+import { useMediaQuery } from '@mantine/hooks'
 import { notifications } from '@mantine/notifications'
-import { IconSend } from '@tabler/icons-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 interface FormValues {
   nombre: string
-  apellido: string
-  telefono: string
   email: string
   mensaje: string
 }
 
 export function ContactForm() {
   const [loading, setLoading] = useState(false)
+  const isMobileClient = useMediaQuery('(max-width: 768px)')
+  const [isMobile, setIsMobile] = useState(true)
 
+  useEffect(() => {
+    setIsMobile(isMobileClient)
+  }, [isMobileClient])
 
   const form = useForm<FormValues>({
     initialValues: {
       nombre: '',
-      apellido: '',
-      telefono: '',
       email: '',
       mensaje: ''
     },
     validate: {
-      nombre: (value) => value.trim().length < 1 ? 'El nombre es obligatorio' : null,
-      apellido: (value) => value.trim().length < 1 ? 'El apellido es obligatorio' : null,
-      telefono: (value) => /^\d{9,15}$/.test(value) ? null : 'Ingrese un número de teléfono válido',
-      email: (value) => /^\S+@\S+\.\S+$/.test(value) ? null : 'Ingrese un email válido',
-      mensaje: (value) => value.trim().length < 5 ? 'El mensaje debe tener al menos 10 caracteres' : null,
-    },
+      nombre: (value) =>
+        value.trim().length < 1 ? 'El nombre es obligatorio' : null,
+      email: (value) =>
+        /^\S+@\S+\.\S+$/.test(value) ? null : 'Ingrese un email válido',
+      mensaje: (value) =>
+        value.trim().length < 5 ? 'El mensaje debe tener al menos 5 caracteres' : null
+    }
   })
 
+  const handleSubmit = async () => {
+    const validation = form.validate()
+    if (validation.hasErrors) {
+      return
+    }
 
-  const handleSubmit = async (values: FormValues) => {
     setLoading(true)
     try {
-      console.log(values)
-
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      console.log(form.values)
+      await new Promise((resolve) => setTimeout(resolve, 1000))
 
       notifications.show({
         title: 'Formulario enviado',
         message: 'Nos pondremos en contacto contigo pronto',
-        color: 'green',
+        color: 'green'
       })
 
       form.reset()
@@ -62,7 +67,7 @@ export function ContactForm() {
       notifications.show({
         title: 'Error',
         message: 'No se pudo enviar el formulario. Inténtalo de nuevo.',
-        color: 'red',
+        color: 'red'
       })
     } finally {
       setLoading(false)
@@ -70,82 +75,61 @@ export function ContactForm() {
   }
 
   return (
-    <section id='contact' className={styles.contactForm}>
-      <Paper
-        shadow="md"
-        p="xl"
-        radius="md"
-        withBorder
-        className={styles.formContainer}
-      >
-        <Title order={2} className={styles.title}>Contáctanos</Title>
-        <Text c="dimmed" size="sm" className={styles.subtitle}>
-          Completa el formulario y nos pondremos en contacto contigo a la brevedad
-        </Text>
-
-        <form onSubmit={form.onSubmit(handleSubmit)}>
-          <div className={`${styles.inputRow} ${styles.nameSection}`}>
-            <div className={styles.inputField}>
+    <section id="contact" className={styles.contactForm}>
+      <Title order={2} className={`fs36 ${styles.title}`}>
+        Contáctenos
+      </Title>
+      <Grid gutter="xl" className={styles.grid}>
+        <Grid.Col span={{ base: 12, md: 6 }}>
+          <Grid className={styles.grid}>
+            <Grid.Col span={{ base: 12, md: 6 }}>
               <TextInput
-                label="Nombre"
-                placeholder="Tu nombre"
-                required
+                placeholder="NOMBRE"
+                className={`${styles.input} fs24`}
+                classNames={{ input: styles.formInput }}
                 {...form.getInputProps('nombre')}
               />
-            </div>
-            <div className={styles.inputField}>
+            </Grid.Col>
+            <Grid.Col span={{ base: 12, md: 6 }}>
               <TextInput
-                label="Apellido"
-                placeholder="Tu apellido"
-                required
-                {...form.getInputProps('apellido')}
-              />
-            </div>
-          </div>
-
-          {/* Second row: Teléfono y Email */}
-          <div className={styles.inputRow}>
-            <div className={styles.inputField}>
-              <TextInput
-                label="Teléfono"
-                placeholder="Tu número de teléfono"
-                required
-                {...form.getInputProps('telefono')}
-              />
-            </div>
-            <div className={styles.inputField}>
-              <TextInput
-                label="Email"
-                placeholder="tu@email.com"
-                required
+                placeholder="EMAIL"
+                className={`${styles.input} fs24`}
+                classNames={{ input: styles.formInput }}
                 {...form.getInputProps('email')}
               />
-            </div>
-          </div>
-
-          {/* Mensaje */}
-          <div className={styles.inputField}>
+            </Grid.Col>
+          </Grid>
+          <div style={{ marginTop: isMobile ? '0px' : '60px' }}>
             <Textarea
-              label="Mensaje"
-              placeholder="¿En qué podemos ayudarte?"
+              placeholder="¿EN QUÉ PODEMOS AYUDARTE?"
+              className={`${styles.input} fs24`}
+              classNames={{ input: styles.formInput }}
               minRows={4}
-              required
               {...form.getInputProps('mensaje')}
             />
           </div>
-
-          <div className={styles.submitButton}>
-            <Button
-              type="submit"
-              size="md"
-              loading={loading}
-              leftSection={<IconSend size="1rem" />}
-            >
-              Enviar mensaje
-            </Button>
-          </div>
-        </form>
-      </Paper>
+        </Grid.Col>
+        {/* Texto institucional */}
+        <Grid.Col span={{ base: 12, md: 4 }} className={styles.messageContainer}>
+          <Text className={`fs21 c131313 ${styles.messageText}`}>
+            Tu proyecto empieza con una buena base. En Casagrande Ingeniería,
+            nos involucramos desde el inicio.
+            <br />
+            <strong>ESPERAMOS TU MENSAJE!</strong>
+          </Text>
+        </Grid.Col>
+      </Grid>
+      <div style={{ marginTop: '60px' }}>
+        <Button
+          onClick={handleSubmit}
+          variant="default"
+          loading={loading}
+          size="xs"
+          className={`fs21 ${styles.button}`}
+        >
+          Enviar mensaje
+        </Button>
+      </div>
     </section>
   )
 }

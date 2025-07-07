@@ -1,67 +1,65 @@
-.formContainer {
-  max-width: 600px;
-  margin: 0 auto;
-  font-family: 'Unageo Regular', sans-serif;
-}
-
 .contactForm {
-  padding-top: 200px;
+  padding: 30px 160px;
+  font-family: 'Unageo Regular', sans-serif;
 }
 
 .title {
-  font-family: 'Unageo Regular', sans-serif;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.nameSection {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  width: 100% !important;
-}
-
-.subtitle {
-  text-align: center;
+  color: #3a1d1d;
   margin-bottom: 2rem;
-  font-family: 'Unageo Regular', sans-serif;
+  width: fit-content;
 }
 
-.inputGroup {
+.input {
   margin-bottom: 1rem;
 }
 
-.submitButton {
-  margin-top: 2rem;
-  font-family: 'Unageo Regular', sans-serif;
+.formInput {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #ccc !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  transition: border-color 0.2s ease;
+  font-size: calc(0.5vw + 15.4px);
 }
 
-.formField {
-  font-family: 'Unageo Regular', sans-serif;
+.formInput:focus {
+  border-bottom: 1px solid #000 !important;
+  box-shadow: none !important;
 }
 
-.formField input,
-.formField textarea {
-  font-family: 'Unageo Regular', sans-serif;
+.formInput::placeholder {
+  color: #999;
+  font-size: calc(0.5vw + 15.4px);
 }
 
-.inputField {
-  width: 100%;
-  margin-bottom: 1rem;
+.button {
+  margin-top: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0;
 }
 
-@media (max-width: 768px) {
-  .inputRow {
-    flex-direction: column;
-    gap: 0;
+.messageText {
+  line-height: 1.4;
+  max-width: 350px;
+}
+
+.messageContainer {
+  margin: auto;
+}
+
+.grid {
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .contactForm {
+    padding: 30px 20px;
   }
 
-  .inputField {
-    width: 100%;
-    margin-bottom: 1rem;
+  .grid {
+    margin-top: 30px;
   }
 
-  .formContainer {
-    padding: 1rem;
-  }
 }
