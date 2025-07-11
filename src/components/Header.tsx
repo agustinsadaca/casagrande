@@ -37,9 +37,11 @@ export default function Header() {
 
   return (
     <header className={`${styles.header} ${isDark ? styles.dark : styles.light}`}>
-      <Link href="/" className={styles.logo}>
-        CASAGRANDE<br />INGENIERIA
-      </Link>
+      {isMobile ?
+        <Link href="/" className={styles.logo}>
+          CASAGRANDE<br />INGENIERIA
+        </Link> : <div></div>
+      }
       {isMobile && (
         <Burger
           opened={opened}

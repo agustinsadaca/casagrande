@@ -32,30 +32,49 @@ export default function Hero() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: hero,
-        start: '-100px top',
-        end: '+=300px',
+        start: '-180px top',
+        end: '+=193px',
         scrub: true,
-        pin: true,
+        pin: false,
         anticipatePin: 1,
         markers: true,
+        onEnter: () => {
+          // Set high z-index at the beginning of the animation
+          gsap.set(logo, { zIndex: 100 })
+        },
         onUpdate: (self) => {
-          if (self.progress >= 1) {
-            logo.classList.add('sticky')
+          // When animation completes, make it fixed
+          if (self.progress >= 0.99) {
+            gsap.set(logo, {
+              position: 'fixed',
+              top: '30px',
+              left: '40px'
+            })
           } else {
-            logo.classList.remove('sticky')
+            // During animation, keep it absolute but with high z-index
+            gsap.set(logo, { position: 'absolute' })
           }
+        },
+        onLeaveBack: () => {
+          // Reset when scrolling back up
+          gsap.set(logo, {
+            position: 'absolute',
+            clearProps: 'top,left'
+          })
         }
       }
     })
 
+
     // Animación del logo
     tl.to(logo, {
       top: '20px',
-      left: '20px',
+      left: '40px',
       xPercent: 0,
       yPercent: 0,
-      width: '180px',
+      width: '280px',
       height: '120px',
+      zIndex: 100,
       ease: 'power2.inOut'
     })
 
