@@ -26,6 +26,7 @@
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "8.5.2",
     "framer-motion": "^12.17.3",
+    "gsap": "^3.13.0",
     "i18next": "24.2.1",
     "i18next-browser-languagedetector": "8.0.2",
     "i18next-http-backend": "3.0.1",
