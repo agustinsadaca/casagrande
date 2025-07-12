@@ -65,12 +65,12 @@
     padding-top: 150px;
   }
 
-  .logoWrapper {
-    width: 300px !important;
-    height: 200px !important;
+  .button {
+    margin-top: 0px;
   }
 
-  .button {
-    margin-top: 80px;
+  .logoStickyWrapper {
+    width: 300px;
+    height: 200px;
   }
 }

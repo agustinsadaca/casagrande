@@ -1,7 +1,7 @@
 .container {
   margin: 0;
   margin-bottom: 200px;
-  padding: 70px;
+  padding: 100px;
 }
 
 .logo {
@@ -90,7 +90,7 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .imageProjects {
     max-height: 210px;
   }
@@ -110,7 +110,7 @@
   }
 
   .projectName {
-    margin-top: 70px;
+    margin-top: 0px;
   }
 
   .detailSection {
@@ -119,6 +119,10 @@
 
   .projectImage {
     margin-left: 0;
+  }
+
+  .column:nth-child(n+2) {
+    padding-top: 50px;
   }
 
 }

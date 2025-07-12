@@ -2,19 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 120px 20px 70px;
+  padding: 40px 120px 40px 70px;
   font-family: 'Unageo Regular', sans-serif;
   position: sticky;
   top: 0;
   z-index: 10;
   backdrop-filter: saturate(180%) blur(10px);
 
-}
-
-.logo {
-  font-family: 'Unageo Regular', sans-serif;
-  font-size: 21px;
-  font-weight: 500;
 }
 
 .nav {
@@ -31,9 +25,14 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .burger {
     display: block;
+  }
+
+  .image {
+    width: 196px;
+    height: 84px;
   }
 
   .header {
@@ -66,6 +65,5 @@
   .nav a {
     display: block;
     padding: 10px 20px;
-    /* Adjust as needed */
   }
 }

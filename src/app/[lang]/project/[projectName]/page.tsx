@@ -2,7 +2,6 @@
 
 import styles from '@/styles/Project.module.css'
 import { Carousel } from '@mantine/carousel'
-import { useMediaQuery } from '@mantine/hooks'
 import Autoplay from 'embla-carousel-autoplay'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
@@ -17,7 +16,6 @@ export default function ProjectPage() {
   const params = useParams()
   const projectId = params.projectName as string
   const autoplay = useRef(Autoplay({ delay: 5000 }))
-  const isMobile = useMediaQuery('(max-width: 768px)')
 
 
   useEffect(() => {
@@ -69,15 +67,6 @@ export default function ProjectPage() {
 
   return (
     <div className={styles.container}>
-      <Image
-        src="/logo.svg"
-        width={150}
-        height={0}
-        style={{ height: 'auto' }}
-        alt="Casagrande logo"
-        className={styles.logo}
-      />
-
       <div className={styles.projectContainer}>
         <div className={styles.columns}>
           <div className={styles.column}>

@@ -72,14 +72,12 @@ export default function Projects() {
       sessionStorage.removeItem('comingFromProject')
 
       const scrollPosition = sessionStorage.getItem('projectsScrollPosition')
-      console.log("Retrieved scroll position:", scrollPosition)
 
       if (scrollPosition) {
         setTimeout(() => {
           window.scrollTo({
             top: parseInt(scrollPosition)
           })
-          console.log("Scrolled to position:", scrollPosition)
         }, 100)
       }
     }
@@ -89,13 +87,6 @@ export default function Projects() {
   const handleClick = (project: ProjectItem) => {
     sessionStorage.setItem('projectsScrollPosition', window.scrollY.toString())
     router.push(`/en/project/${project.id}`)
-  }
-  const handleRowHoverStart = (index: number) => {
-    setHoveredRow(index)
-  }
-
-  const handleRowHoverEnd = () => {
-    setHoveredRow(null)
   }
 
   if (loading) {
@@ -112,11 +103,6 @@ export default function Projects() {
 
   return (
     <section id="projects" className={styles.projectsSection}>
-      {!isMobile && (
-        <div className={styles.projectsLogoImage}>
-          <Image src="/logo.svg" alt="logo" className={styles.image} width={180} height={120} />
-        </div>
-      )}
       <div className={styles.projectsGrid}>
         {projects.map((project, index) => (
           <div
