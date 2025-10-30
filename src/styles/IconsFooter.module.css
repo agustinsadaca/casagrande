@@ -4,26 +4,38 @@
   border: 2px solid white;
   padding: 5px;
   margin: 5px;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  background-color: transparent;
 }
 
 .instagramIcon {
   width: 100%;
   height: 100%;
-  transition: all 0.3s ease;
-  filter: none;
   filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
 }
 
 .iconWrapper:hover {
-  background-color: #333333;
-  border-color: black;
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .iconWrapper:hover .instagramIcon {
-  filter: none;
+  filter: brightness(0) invert(0.6);
+}
+
+.iconWrapper:active,
+.iconWrapper:focus,
+.iconWrapper:focus-visible {
+  background-color: transparent;
+  border-color: white !important;
+  outline: none;
+}
+
+.iconWrapper:active .instagramIcon,
+.iconWrapper:focus .instagramIcon,
+.iconWrapper:focus-visible .instagramIcon {
+  filter: brightness(0) invert(1) !important;
 }

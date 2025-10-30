@@ -3,14 +3,22 @@ import styles from '@/styles/Hero.module.css'
 import { useMediaQuery } from '@mantine/hooks'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import Logo from './Logo'
 
 export default function Hero() {
   const heroRef = useRef(null)
   const logoWrapperRef = useRef(null)
+  const svgRef = useRef<SVGSVGElement | null>(null)
+  const [animationKey, setAnimationKey] = useState(0)
+  const hasInitiallyAnimated = useRef(false)
   const isMobile = useMediaQuery('(max-width:  1024px)')
+
+  const triggerSvgAnimation = () => {
+    setAnimationKey(prev => prev + 1)
+  }
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
 
@@ -19,7 +27,6 @@ export default function Hero() {
 
     if (!hero || !logo || isMobile) return
 
-    // Inicializar posición centrada
     gsap.set(logo, {
       position: 'absolute',
       top: '30%',
@@ -31,7 +38,6 @@ export default function Hero() {
       zIndex: 10
     })
 
-    // Timeline para animar logo y fijarlo al finalizar
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: hero,
@@ -42,11 +48,12 @@ export default function Hero() {
         anticipatePin: 1,
         markers: false,
         onEnter: () => {
-          // Set high z-index at the beginning of the animation
           gsap.set(logo, { zIndex: 100 })
+          if (hasInitiallyAnimated.current) {
+            triggerSvgAnimation()
+          }
         },
         onUpdate: (self) => {
-          // When animation completes, make it fixed
           if (self.progress >= 0.99) {
             gsap.set(logo, {
               position: 'fixed',
@@ -54,22 +61,20 @@ export default function Hero() {
               left: '60px'
             })
           } else {
-            // During animation, keep it absolute but with high z-index
             gsap.set(logo, { position: 'absolute' })
           }
         },
         onLeaveBack: () => {
-          // Reset when scrolling back up
           gsap.set(logo, {
             position: 'absolute',
             clearProps: 'top,left'
           })
+          triggerSvgAnimation()
         }
       }
     })
 
 
-    // Animación del logo
     tl.to(logo, {
       top: '30px',
       left: '60px',
@@ -87,32 +92,76 @@ export default function Hero() {
     }
   }, [isMobile])
 
+  useEffect(() => {
+    const svg = svgRef.current
+    if (!svg) return
+
+    const line1 = svg.querySelector('.animate-line1')
+    const line2 = svg.querySelector('.animate-line2')
+
+    if (line1 && line2) {
+      if (animationKey > 0) {
+        line1.classList.remove('animate-line1')
+        line2.classList.remove('animate-line2')
+
+        void svg.getBoundingClientRect()
+
+        line1.classList.add('animate-line1')
+        line2.classList.add('animate-line2')
+      }
+
+      if (!hasInitiallyAnimated.current) {
+        hasInitiallyAnimated.current = true
+      }
+    }
+  }, [animationKey])
+
+  useEffect(() => {
+    if (!isMobile) return
+
+    let lastScrollY = window.scrollY
+    let hasScrolledDown = false
+    let isInitialLoad = true
+
+    // Prevent triggering on initial load
+    const initTimer = setTimeout(() => {
+      isInitialLoad = false
+    }, 500)
+
+    const handleScroll = () => {
+      if (isInitialLoad) return
+
+      const currentScrollY = window.scrollY
+
+      if (currentScrollY > 200) {
+        hasScrolledDown = true
+      }
+
+      if (currentScrollY < lastScrollY && hasScrolledDown && currentScrollY < 100) {
+        triggerSvgAnimation()
+        hasScrolledDown = false
+      }
+
+      lastScrollY = currentScrollY
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+
+    return () => {
+      clearTimeout(initTimer)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isMobile])
 
   return (
     <section className={styles.hero} ref={heroRef}>
       <div className={styles.logoStickyWrapper} ref={logoWrapperRef}>
         {!isMobile ? (
           <Link href="/" className={styles.logoLink}>
-            <Image
-              src="/logo.svg"
-              alt="Logo"
-              className={styles.image}
-              fill
-              priority
-              unoptimized
-              style={{ objectFit: 'contain' }}
-            />
+            <Logo ref={svgRef} className={styles.image} animate={true} />
           </Link>
         ) : (
-          <Image
-            src="/logo.svg"
-            alt="Logo"
-            className={styles.image}
-            fill
-            priority
-            unoptimized
-            style={{ objectFit: 'contain' }}
-          />
+          <Logo ref={svgRef} className={styles.image} animate={true} />
         )}
       </div>
 

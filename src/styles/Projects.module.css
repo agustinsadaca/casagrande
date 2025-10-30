@@ -150,5 +150,6 @@
 
   .imageProjects {
     width: 389px !important;
+    filter: grayscale(0%) !important;
   }
 }
