@@ -19,32 +19,59 @@ const ibmPlexSans = IBM_Plex_Sans({
   preload: true,
 })
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
-  title: "Casa Grande",
-  description:
-    "Oficina tecnica",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Casa Grande",
+    template: "%s | Casa Grande"
+  },
+  description: "Oficina técnica especializada en soluciones integrales.",
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
     title: "Casa Grande",
-    description:
-      "Oficina tecnica",
-    url: "http://localhost:3000",
-    siteName: "casa grande",
+    description: "Oficina técnica especializada en soluciones integrales.",
+    url: siteUrl,
+    siteName: "Casa Grande",
     images: [
       {
-        url: "http://localhost:3000",
-        width: 512,
-        height: 512,
+        url: `${siteUrl}/logo.svg`,
+        width: 1200,
+        height: 630,
+        alt: 'Casa Grande Logo',
       },
     ],
-    locale: "es-US",
+    locale: "es-AR",
     type: "website",
   },
-  icons: "",
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Casa Grande',
+    description: 'Oficina técnica especializada en soluciones integrales.',
+    images: [`${siteUrl}/logo.svg`],
+  },
+  icons: {
+    icon: [
+      { url: '/logo.svg', type: 'image/svg+xml' },
+      { url: '/favicon.webp', sizes: 'any' },
+    ],
+    shortcut: '/favicon.webp',
+    apple: [
+      { url: '/logo.svg', type: 'image/svg+xml' },
+    ],
+  },
+  manifest: '/site.webmanifest',
 }
 
 export default async function LocaleLayout({ children }: { children: React.ReactNode }) {
