@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: `${siteUrl}/og-image.png`,
-        width: 666,
-        height: 440,
+        width: 1200,
+        height: 630,
         alt: 'Casa Grande',
         type: 'image/webp',
       },
@@ -62,8 +62,8 @@ export const metadata: Metadata = {
     description: 'Oficina técnica especializada en soluciones integrales.',
     images: [{
       url: `${siteUrl}/og-image.png`,
-      width: 666,
-      height: 440,
+      width: 1200,
+      height: 630,
       alt: 'Casa Grande',
     }],
   },
