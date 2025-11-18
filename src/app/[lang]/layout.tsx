@@ -46,10 +46,11 @@ export const metadata: Metadata = {
     siteName: "Casa Grande",
     images: [
       {
-        url: `${siteUrl}/logo.svg`,
+        url: `${siteUrl}/og-image.webp`,
         width: 1200,
         height: 630,
-        alt: 'Casa Grande Logo',
+        alt: 'Casa Grande',
+        type: 'image/webp',
       },
     ],
     locale: "es-AR",
@@ -59,7 +60,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Casa Grande',
     description: 'Oficina técnica especializada en soluciones integrales.',
-    images: [`${siteUrl}/logo.svg`],
+    images: [{
+      url: `${siteUrl}/og-image.webp`,
+      width: 1200,
+      height: 630,
+      alt: 'Casa Grande',
+    }],
   },
   icons: {
     icon: [
