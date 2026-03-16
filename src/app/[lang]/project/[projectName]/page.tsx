@@ -1,6 +1,6 @@
 import { ProjectItem } from '@/types/project'
-import { Metadata } from 'next'
 import fs from 'fs'
+import { Metadata } from 'next'
 import path from 'path'
 import ProjectPageClient from './ProjectPageClient'
 
@@ -31,7 +31,7 @@ export async function generateMetadata(
   const description =
     project.subtitle ||
     (Array.isArray(projectDesc) ? projectDesc.join(', ') : projectDesc) ||
-    'Proyecto de Casa Grande Ingeniería'
+    'Proyecto de CASAGRANDE INGENIERIA'
 
   const ogImageUrl = `${siteUrl}/og-image.png`
 

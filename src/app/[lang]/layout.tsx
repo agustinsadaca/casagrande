@@ -24,10 +24,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://casagrandeing.com'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Casa Grande - Consultoría de Ingeniería Estructural",
-    template: "%s | Casa Grande"
+    default: "CASAGRANDE INGENIERIA - Consultoría de Ingeniería Estructural",
+    template: "%s | CASAGRANDE"
   },
-  description: "Oficina técnica especializada en soluciones integrales.",
+  description: "Consultoría de Ingeniería Estructural",
   alternates: {
     canonical: siteUrl,
     languages: {
@@ -48,16 +48,16 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Casa Grande",
-    description: "Oficina técnica especializada en soluciones integrales.",
+    title: "CASAGRANDE INGENIERIA",
+    description: "Consultoría de Ingeniería Estructural",
     url: siteUrl,
-    siteName: "Casa Grande",
+    siteName: "CASAGRANDE INGENIERIA",
     images: [
       {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Casa Grande',
+        alt: 'CASAGRANDE INGENIERIA',
         type: 'image/png',
       },
     ],
@@ -66,13 +66,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Casa Grande',
-    description: 'Oficina técnica especializada en soluciones integrales.',
+    title: 'CASAGRANDE INGENIERIA',
+    description: 'Consultoría de Ingeniería Estructural',
     images: [{
       url: `${siteUrl}/og-image.png`,
       width: 1200,
       height: 630,
-      alt: 'Casa Grande',
+      alt: 'CASAGRANDE INGENIERIA',
     }],
   },
   icons: {
@@ -106,10 +106,10 @@ export default async function LocaleLayout({ children }: { children: React.React
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    name: 'Casa Grande Ingeniería',
+    name: 'CASAGRANDE INGENIERIA',
     url: siteUrl,
     logo: `${siteUrl}/logo.svg`,
-    description: 'Oficina técnica especializada en soluciones integrales.',
+    description: 'Consultoría de Ingeniería Estructural',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Mendoza',

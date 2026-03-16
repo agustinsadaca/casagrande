@@ -1,17 +1,23 @@
 {
-  "name": "Casa Grande Ingeniería",
-  "short_name": "Casa Grande",
-  "description": "Oficina técnica especializada en soluciones integrales.",
+  "name": "CASAGRANDE Ingeniería",
+  "short_name": "CASAGRANDE",
+  "description": "Consultoría de Ingeniería Estructural",
   "lang": "es-AR",
   "dir": "ltr",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "browser"
+  ],
   "background_color": "#ffffff",
   "theme_color": "#000000",
   "orientation": "any",
-  "categories": ["business"],
+  "categories": [
+    "business"
+  ],
   "icons": [
     {
       "src": "/logo-556-x-556.png",

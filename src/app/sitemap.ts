@@ -14,11 +14,9 @@ const importantPaths = [
   '/', '/proyectos', '/servicios', '/contacto'
 ]
 
-// Project paths from your data
-// This assumes you have a projects.json file
 const getProjectPaths = (): string[] => {
   try {
-    const projectsFile = path.join(process.cwd(), 'public/data/projects.json')
+    const projectsFile = path.join(process.cwd(), 'public/data/projects.es.json')
     const projectsData = JSON.parse(fs.readFileSync(projectsFile, 'utf8'))
     return projectsData.map((project: { id: string }) => `/project/${project.id}`)
   } catch (error) {
