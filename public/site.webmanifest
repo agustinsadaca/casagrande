@@ -1,21 +1,29 @@
 {
-  "name": "Casa Grande",
+  "name": "Casa Grande Ingeniería",
   "short_name": "Casa Grande",
   "description": "Oficina técnica especializada en soluciones integrales.",
+  "lang": "es-AR",
+  "dir": "ltr",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
   "background_color": "#ffffff",
   "theme_color": "#000000",
+  "orientation": "any",
+  "categories": ["business"],
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "/logo-556-x-556.png",
+      "type": "image/png",
+      "sizes": "556x556",
+      "purpose": "any maskable"
     },
     {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "/favicon.webp",
+      "type": "image/webp",
+      "sizes": "any",
+      "purpose": "any"
     }
   ]
 }

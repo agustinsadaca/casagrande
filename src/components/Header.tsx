@@ -2,13 +2,15 @@
 import styles from '@/styles/Header.module.css'
 import { Burger } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
-import { useLocale } from 'next-intl'
+import LanguageSwitcher from '@/contexts/LanguageSwitcher'
+import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 export default function Header() {
+  const t = useTranslations('nav')
   const [isDark, setIsDark] = useState(true)
   const [opened, setOpened] = useState(false)
   const isMobile = useMediaQuery('(max-width: 1024px)')
@@ -61,10 +63,12 @@ export default function Header() {
         />
       )}
       <nav className={`${styles.nav} ${opened ? styles.opened : ''}`}>
-        <a href={`#projects`} onClick={(e) => handleNavClick('projects', e)}>PROYECTOS</a>
-        <a href={`#office`} onClick={(e) => handleNavClick('office', e)}>OFICINA</a>
-        <a href={`#contact`} onClick={(e) => handleNavClick('contact', e)}>CONTACTO</a>
+        <a href={`#projects`} onClick={(e) => handleNavClick('projects', e)}>{t('projects')}</a>
+        <a href={`#office`} onClick={(e) => handleNavClick('office', e)}>{t('office')}</a>
+        <a href={`#contact`} onClick={(e) => handleNavClick('contact', e)}>{t('contact')}</a>
+        <div className={styles.langMobile}><LanguageSwitcher /></div>
       </nav>
+      <div className={styles.langDesktop}><LanguageSwitcher /></div>
     </header>
   )
 }

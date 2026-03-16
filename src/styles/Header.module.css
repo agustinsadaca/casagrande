@@ -21,6 +21,17 @@
   font-size: 21px;
 }
 
+.langDesktop {
+  position: absolute;
+  right: 75px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.langMobile {
+  display: none;
+}
+
 .burger {
   display: none;
 }
@@ -56,6 +67,18 @@
     padding-bottom: 30px;
     width: 100%;
 
+  }
+
+  .langDesktop {
+    display: none;
+  }
+
+  .langMobile {
+    display: block;
+    margin-left: 30px;
+    padding: 10px 20px;
+    font-family: 'Unageo Regular', sans-serif;
+    font-size: 21px;
   }
 
   .nav.opened a {

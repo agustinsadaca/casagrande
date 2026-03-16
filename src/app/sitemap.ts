@@ -2,8 +2,7 @@ import fs from 'fs'
 import type { MetadataRoute } from 'next'
 import path from 'path'
 
-// Set your actual domain here
-const baseUrl = 'https://yourdomain.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://casagrandeing.com'
 
 // Paths to exclude from the sitemap
 const bannedPaths = [
@@ -21,7 +20,7 @@ const getProjectPaths = (): string[] => {
   try {
     const projectsFile = path.join(process.cwd(), 'public/data/projects.json')
     const projectsData = JSON.parse(fs.readFileSync(projectsFile, 'utf8'))
-    return projectsData.map(project => `/project/${project.id}`)
+    return projectsData.map((project: { id: string }) => `/project/${project.id}`)
   } catch (error) {
     console.warn('Could not load project paths:', error)
     return []
@@ -61,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   })
 
   // Add language variants for important pages
-  const languageVariants = ['en', 'de'].flatMap(lang =>
+  const languageVariants = ['en', 'es'].flatMap(lang =>
     importantPaths.map(route => ({
       url: `${baseUrl}/${lang}${route === '/' ? '' : route}`,
       lastModified: new Date(),

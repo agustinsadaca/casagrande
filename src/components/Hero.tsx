@@ -167,7 +167,7 @@ export default function Hero() {
 
       <section ref={heroRef}>
         <button className={`${styles.button} fontUnageoRegularSemiBold fs24`}>
-          OFICINA TÉCNICA
+          CONSULTORIA
         </button>
       </section>
     </section>

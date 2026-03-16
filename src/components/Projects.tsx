@@ -6,12 +6,14 @@ import { useMediaQuery } from '@mantine/hooks'
 import Autoplay from 'embla-carousel-autoplay'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useLocale } from 'next-intl'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { ProjectItem } from '../types/project'
 
 export default function Projects() {
   const router = useRouter()
+  const locale = useLocale()
   const [projects, setProjects] = useState<ProjectItem[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -25,7 +27,7 @@ export default function Projects() {
     const fetchProjects = async () => {
       try {
         const timestamp = new Date().getTime()
-        const response = await fetch(`/data/projects.json?t=${timestamp}`)
+        const response = await fetch(`/data/projects.${locale}.json?t=${timestamp}`)
         if (!response.ok) {
           throw new Error('Failed to fetch projects data')
         }
@@ -86,7 +88,7 @@ export default function Projects() {
 
   const handleClick = (project: ProjectItem) => {
     sessionStorage.setItem('projectsScrollPosition', window.scrollY.toString())
-    router.push(`/en/project/${project.id}`)
+    router.push(`/${locale}/project/${project.id}`)
   }
 
   if (loading) {

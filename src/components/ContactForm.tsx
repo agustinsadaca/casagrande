@@ -12,6 +12,7 @@ import {
 import { useForm } from '@mantine/form'
 import { useMediaQuery } from '@mantine/hooks'
 import { notifications } from '@mantine/notifications'
+import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 interface FormValues {
@@ -24,6 +25,7 @@ export function ContactForm() {
   const [loading, setLoading] = useState(false)
   const isMobileClient = useMediaQuery('(max-width: 768px)')
   const [isMobile, setIsMobile] = useState(true)
+  const t = useTranslations('contact')
 
   useEffect(() => {
     setIsMobile(isMobileClient)
@@ -37,11 +39,11 @@ export function ContactForm() {
     },
     validate: {
       nombre: (value) =>
-        value.trim().length < 1 ? 'El nombre es obligatorio' : null,
+        value.trim().length < 1 ? t('validation.nameRequired') : null,
       email: (value) =>
-        /^\S+@\S+\.\S+$/.test(value) ? null : 'Ingrese un email válido',
+        /^\S+@\S+\.\S+$/.test(value) ? null : t('validation.emailInvalid'),
       mensaje: (value) =>
-        value.trim().length < 5 ? 'El mensaje debe tener al menos 5 caracteres' : null
+        value.trim().length < 5 ? t('validation.messageMinLength') : null
     }
   })
 
@@ -57,16 +59,16 @@ export function ContactForm() {
       await new Promise((resolve) => setTimeout(resolve, 1000))
 
       notifications.show({
-        title: 'Formulario enviado',
-        message: 'Nos pondremos en contacto contigo pronto',
+        title: t('notifications.successTitle'),
+        message: t('notifications.successMessage'),
         color: 'green'
       })
 
       form.reset()
     } catch (error) {
       notifications.show({
-        title: 'Error',
-        message: 'No se pudo enviar el formulario. Inténtalo de nuevo.',
+        title: t('notifications.errorTitle'),
+        message: t('notifications.errorMessage'),
         color: 'red'
       })
     } finally {
@@ -77,14 +79,14 @@ export function ContactForm() {
   return (
     <section id="contact" className={styles.contactForm}>
       <Title order={2} className={`fs36 ${styles.title}`}>
-        Contáctenos
+        {t('title')}
       </Title>
       <Grid gutter="xl" className={styles.grid}>
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Grid className={styles.grid}>
             <Grid.Col span={{ base: 12, md: 6 }}>
               <TextInput
-                placeholder="NOMBRE"
+                placeholder={t('namePlaceholder')}
                 className={`${styles.input} fs24`}
                 classNames={{ input: styles.formInput }}
                 {...form.getInputProps('nombre')}
@@ -92,7 +94,7 @@ export function ContactForm() {
             </Grid.Col>
             <Grid.Col span={{ base: 12, md: 6 }}>
               <TextInput
-                placeholder="EMAIL"
+                placeholder={t('emailPlaceholder')}
                 className={`${styles.input} fs24`}
                 classNames={{ input: styles.formInput }}
                 {...form.getInputProps('email')}
@@ -101,7 +103,7 @@ export function ContactForm() {
           </Grid>
           <div style={{ marginTop: isMobile ? '0px' : '60px' }}>
             <Textarea
-              placeholder="¿EN QUÉ PODEMOS AYUDARTE?"
+              placeholder={t('messagePlaceholder')}
               className={`${styles.input} fs24`}
               classNames={{ input: styles.formInput }}
               minRows={4}
@@ -109,13 +111,12 @@ export function ContactForm() {
             />
           </div>
         </Grid.Col>
-        {/* Texto institucional */}
+        {/* Institutional text */}
         <Grid.Col span={{ base: 12, md: 4 }} className={styles.messageContainer}>
           <Text className={`fs21 c131313 ${styles.messageText}`}>
-            Tu proyecto empieza con una buena base. En Casagrande Ingeniería,
-            nos involucramos desde el inicio.
+            {t('bodyText')}
             <br />
-            <strong>ESPERAMOS TU MENSAJE!</strong>
+            <strong>{t('cta')}</strong>
           </Text>
         </Grid.Col>
       </Grid>
@@ -127,7 +128,7 @@ export function ContactForm() {
           size="xs"
           className={`fs21 ${styles.button}`}
         >
-          Enviar mensaje
+          {t('sendButton')}
         </Button>
       </div>
     </section>

@@ -19,7 +19,7 @@ const ibmPlexSans = IBM_Plex_Sans({
   preload: true,
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://casagrandeing.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     template: "%s | Casa Grande"
   },
   description: "Oficina técnica especializada en soluciones integrales.",
+  alternates: {
+    canonical: siteUrl,
+    languages: {
+      'en': `${siteUrl}/en`,
+      'es': `${siteUrl}/es`,
+      'x-default': siteUrl,
+    },
+  },
   robots: {
     index: true,
     follow: true,
@@ -50,7 +58,7 @@ export const metadata: Metadata = {
         width: 1200,
         height: 630,
         alt: 'Casa Grande',
-        type: 'image/webp',
+        type: 'image/png',
       },
     ],
     locale: "es-AR",
@@ -69,12 +77,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/logo.svg', type: 'image/svg+xml' },
+      { url: '/logo-556-x-556.png', type: 'image/png', sizes: '556x556' },
       { url: '/favicon.webp', sizes: 'any' },
     ],
     shortcut: '/favicon.webp',
     apple: [
-      { url: '/logo.svg', type: 'image/svg+xml' },
+      { url: '/logo-556-x-556.png', type: 'image/png', sizes: '556x556' },
     ],
   },
   manifest: '/site.webmanifest',
@@ -95,10 +103,28 @@ export default async function LocaleLayout({ children }: { children: React.React
   })
 
 
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Casa Grande Ingeniería',
+    url: siteUrl,
+    logo: `${siteUrl}/logo.svg`,
+    description: 'Oficina técnica especializada en soluciones integrales.',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Mendoza',
+      addressCountry: 'AR',
+    },
+  }
+
   return (
     <html lang={locale} className={ibmPlexSans.className}>
       <head>
         <PreloadResources />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
       <body>
         <NextIntlClientProvider messages={messages}>

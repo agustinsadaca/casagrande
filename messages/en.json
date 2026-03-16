@@ -1,1 +1,27 @@
-{}
+{
+  "nav": {
+    "projects": "PROJECTS",
+    "office": "OFFICE",
+    "contact": "CONTACT"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "namePlaceholder": "NAME",
+    "emailPlaceholder": "EMAIL",
+    "messagePlaceholder": "HOW CAN WE HELP YOU?",
+    "bodyText": "Your project starts with a solid foundation. At Casagrande Ingeniería, we get involved from the very beginning.",
+    "cta": "WE LOOK FORWARD TO HEARING FROM YOU!",
+    "sendButton": "Send message",
+    "validation": {
+      "nameRequired": "Name is required",
+      "emailInvalid": "Enter a valid email",
+      "messageMinLength": "Message must be at least 5 characters"
+    },
+    "notifications": {
+      "successTitle": "Form submitted",
+      "successMessage": "We will get in touch with you soon",
+      "errorTitle": "Error",
+      "errorMessage": "Could not submit the form. Please try again."
+    }
+  }
+}

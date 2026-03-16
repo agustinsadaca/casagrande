@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "projects": "PROYECTOS",
+    "office": "OFICINA",
+    "contact": "CONTACTO"
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "namePlaceholder": "NOMBRE",
+    "emailPlaceholder": "EMAIL",
+    "messagePlaceholder": "¿EN QUÉ PODEMOS AYUDARTE?",
+    "bodyText": "Tu proyecto empieza con una buena base. En Casagrande Ingeniería, nos involucramos desde el inicio.",
+    "cta": "ESPERAMOS TU MENSAJE!",
+    "sendButton": "Enviar mensaje",
+    "validation": {
+      "nameRequired": "El nombre es obligatorio",
+      "emailInvalid": "Ingrese un email válido",
+      "messageMinLength": "El mensaje debe tener al menos 5 caracteres"
+    },
+    "notifications": {
+      "successTitle": "Formulario enviado",
+      "successMessage": "Nos pondremos en contacto contigo pronto",
+      "errorTitle": "Error",
+      "errorMessage": "No se pudo enviar el formulario. Inténtalo de nuevo."
+    }
+  }
+}
