@@ -33,20 +33,18 @@ export async function generateMetadata(
     (Array.isArray(projectDesc) ? projectDesc.join(', ') : projectDesc) ||
     'Proyecto de Casa Grande Ingeniería'
 
-  const ogImagePath = project.imageDetailUrls?.[0] ?? '/og-image.png'
-  const ogImageUrl = `${siteUrl}${ogImagePath}`
-  const ogImageType = ogImagePath.endsWith('.png') ? 'image/png' : 'image/webp'
+  const ogImageUrl = `${siteUrl}/og-image.png`
 
   return {
     title,
     description,
     alternates: {
-      canonical: `${siteUrl}/project/${projectName}`,
+      canonical: `${siteUrl}/${lang}/project/${projectName}`,
     },
     openGraph: {
       title,
       description,
-      images: [{ url: ogImageUrl, alt: title, type: ogImageType }],
+      images: [{ url: ogImageUrl, alt: title, type: 'image/png', width: 1200, height: 630 }],
     },
     twitter: {
       card: 'summary_large_image',
