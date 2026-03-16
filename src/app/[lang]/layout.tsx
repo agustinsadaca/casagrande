@@ -24,7 +24,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://casagrandeing.com'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Casa Grande",
+    default: "Casa Grande - Consultoría de Ingeniería Estructural",
     template: "%s | Casa Grande"
   },
   description: "Oficina técnica especializada en soluciones integrales.",
