@@ -5,7 +5,9 @@
       "Bash(npx tsc:*)",
       "Bash(npm run:*)",
       "Bash(tasklist)",
-      "Bash(curl -s http://localhost:3000/es)"
+      "Bash(curl -s http://localhost:3000/es)",
+      "Bash(npm install:*)",
+      "Bash(npm view:*)"
     ]
   }
 }
