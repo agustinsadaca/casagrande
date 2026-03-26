@@ -15,8 +15,7 @@
     "validation": {
       "nameRequired": "Name is required",
       "emailInvalid": "Enter a valid email",
-      "messageMinLength": "Message must be at least 5 characters",
-      "captchaRequired": "Please complete the captcha"
+      "messageMinLength": "Message must be at least 5 characters"
     },
     "notifications": {
       "successTitle": "Form submitted",
