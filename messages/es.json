@@ -15,7 +15,8 @@
     "validation": {
       "nameRequired": "El nombre es obligatorio",
       "emailInvalid": "Ingrese un email válido",
-      "messageMinLength": "El mensaje debe tener al menos 5 caracteres"
+      "messageMinLength": "El mensaje debe tener al menos 5 caracteres",
+      "captchaRequired": "Por favor completá el captcha"
     },
     "notifications": {
       "successTitle": "Formulario enviado",
