@@ -6,7 +6,7 @@ import LanguageSwitcher from '@/contexts/LanguageSwitcher'
 import { useLocale, useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 export default function Header() {
@@ -15,27 +15,11 @@ export default function Header() {
   const [opened, setOpened] = useState(false)
   const isMobile = useMediaQuery('(max-width: 1024px)')
   const locale = useLocale()
-  const router = useRouter()
   const pathname = usePathname()
   const isHomePage = pathname === '/' || pathname === `/${locale}` || pathname === `/${locale}/`
 
   const toggleBurger = () => {
     setOpened((o) => !o)
-  }
-
-  const handleNavClick = (sectionId, e) => {
-    e.preventDefault()
-    setOpened(false)
-
-
-    if (isHomePage) {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-      }
-    } else {
-      router.push(`/${locale}/#${sectionId}`)
-    }
   }
 
   return (
@@ -63,9 +47,9 @@ export default function Header() {
         />
       )}
       <nav className={`${styles.nav} ${opened ? styles.opened : ''}`}>
-        <a href={`#projects`} onClick={(e) => handleNavClick('projects', e)}>{t('projects')}</a>
-        <a href={`#office`} onClick={(e) => handleNavClick('office', e)}>{t('office')}</a>
-        <a href={`#contact`} onClick={(e) => handleNavClick('contact', e)}>{t('contact')}</a>
+        <Link href={`/${locale}/projects`} onClick={() => setOpened(false)} style={pathname.includes('/projects') ? { color: '#9A9A9A' } : {}}>{t('projects')}</Link>
+        <Link href={`/${locale}/office`} onClick={() => setOpened(false)} style={pathname.includes('/office') ? { color: '#9A9A9A' } : {}}>{t('office')}</Link>
+        <Link href={`/${locale}/contact`} onClick={() => setOpened(false)} style={pathname.includes('/contact') ? { color: '#9A9A9A' } : {}}>{t('contact')}</Link>
         <div className={styles.langMobile}><LanguageSwitcher /></div>
       </nav>
       <div className={styles.langDesktop}><LanguageSwitcher /></div>

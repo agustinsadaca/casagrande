@@ -25,17 +25,6 @@
   height: 100%;
 }
 
-.button {
-  margin-top: 40px;
-  background-color: #E7E7E7;
-  color: black;
-  border: none;
-  padding: 5px 30px;
-  cursor: default;
-  border-radius: 50px;
-  z-index: 10;
-  position: relative;
-}
 
 .logoStickyWrapper {
   position: absolute;
@@ -61,12 +50,8 @@
 
 
 @media screen and (max-width: 768px) {
-  .hero {
+.hero {
     padding-top: 150px;
-  }
-
-  .button {
-    margin-top: 0px;
   }
 
   .logoStickyWrapper {

@@ -1,30 +1,30 @@
 'use client'
 import HeroImage from '@/components/Hero'
 import ProjectDetails from '@/components/Projects'
-import { Box } from '@mantine/core'
-import { useMediaQuery } from '@mantine/hooks'
-import { useEffect, useState } from 'react'
 import ArrowScrollUp from '../../components/ArrowScrollUp'
-import { ContactForm } from '../../components/ContactForm'
+import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 
 export default function Home() {
-  const isMobileClient = useMediaQuery('(max-width: 768px)')
-  const [isMobile, setIsMobile] = useState(true)
-
-  useEffect(() => {
-    setIsMobile(isMobileClient)
-  }, [isMobileClient])
+  const locale = useLocale()
+  const t = useTranslations('projects')
 
   return (
     <>
       <HeroImage />
-      <ProjectDetails />
-      <Box style={{ marginLeft: isMobile ? '0px' : '150px' }}>
-        <ContactForm />
-      </Box>
-      <Box style={{ display: 'flex', justifyContent: 'center', paddingTop: '120px', marginLeft: isMobile ? '0px' : '150px' }} my="xl">
+      <ProjectDetails limit={2} />
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '0 0 80px' }}>
+        <Link
+          href={`/${locale}/projects`}
+          className="fontUnageoRegularSemiBold fs21"
+          style={{ border: '1px solid black', borderRadius: 0, padding: '8px 32px' }}
+        >
+          {t('seeMore')}
+        </Link>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '60px' }}>
         <ArrowScrollUp />
-      </Box>
+      </div>
     </>
   )
 }

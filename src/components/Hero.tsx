@@ -3,6 +3,7 @@ import styles from '@/styles/Hero.module.css'
 import { useMediaQuery } from '@mantine/hooks'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
@@ -14,6 +15,7 @@ export default function Hero() {
   const [animationKey, setAnimationKey] = useState(0)
   const hasInitiallyAnimated = useRef(false)
   const isMobile = useMediaQuery('(max-width:  1024px)')
+  const t = useTranslations('office')
 
   const triggerSvgAnimation = () => {
     setAnimationKey(prev => prev + 1)
@@ -166,9 +168,9 @@ export default function Hero() {
       </div>
 
       <section ref={heroRef}>
-        <button className={`${styles.button} fontUnageoRegularSemiBold fs24`}>
-          CONSULTORIA
-        </button>
+        <p className={`${isMobile ? 'fs24' : 'fs30'} fontUnageoRegularSemiBold`} style={{ textAlign: 'center' }}>
+          {t('text')}
+        </p>
       </section>
     </section>
   )

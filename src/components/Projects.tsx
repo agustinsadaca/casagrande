@@ -11,7 +11,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { ProjectItem } from '../types/project'
 
-export default function Projects() {
+export default function Projects({ limit }: { limit?: number }) {
   const router = useRouter()
   const locale = useLocale()
   const [projects, setProjects] = useState<ProjectItem[]>([])
@@ -106,7 +106,7 @@ export default function Projects() {
   return (
     <section id="projects" className={styles.projectsSection}>
       <div className={styles.projectsGrid}>
-        {projects.map((project, index) => (
+        {(limit ? projects.slice(0, limit) : projects).map((project, index) => (
           <div
             key={project.id}
             onClick={() => handleClick(project)}

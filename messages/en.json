@@ -4,6 +4,12 @@
     "office": "OFFICE",
     "contact": "CONTACT"
   },
+  "office": {
+    "text": "At Casagrande Ingeniería we develop structural solutions for architecture projects, integrating technical analysis, building expertise, and close attention to the construction process."
+  },
+  "projects": {
+    "seeMore": "SEE MORE"
+  },
   "contact": {
     "title": "Contact Us",
     "namePlaceholder": "NAME",
