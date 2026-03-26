@@ -13,7 +13,8 @@ import { useForm } from '@mantine/form'
 import { useMediaQuery } from '@mantine/hooks'
 import { notifications } from '@mantine/notifications'
 import { useTranslations } from 'next-intl'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 interface FormValues {
   nombre: string
@@ -21,8 +22,12 @@ interface FormValues {
   mensaje: string
 }
 
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''
+
 export function ContactForm() {
   const [loading, setLoading] = useState(false)
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
   const isMobileClient = useMediaQuery('(max-width: 768px)')
   const [isMobile, setIsMobile] = useState(true)
   const t = useTranslations('contact')
@@ -49,14 +54,26 @@ export function ContactForm() {
 
   const handleSubmit = async () => {
     const validation = form.validate()
-    if (validation.hasErrors) {
+    if (validation.hasErrors) return
+
+    if (!captchaToken) {
+      notifications.show({
+        title: t('notifications.errorTitle'),
+        message: t('validation.captchaRequired'),
+        color: 'red'
+      })
       return
     }
 
     setLoading(true)
     try {
-      console.log(form.values)
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form.values, captchaToken })
+      })
+
+      if (!res.ok) throw new Error('Error en el servidor')
 
       notifications.show({
         title: t('notifications.successTitle'),
@@ -65,6 +82,8 @@ export function ContactForm() {
       })
 
       form.reset()
+      setCaptchaToken(null)
+      recaptchaRef.current?.reset()
     } catch (error) {
       notifications.show({
         title: t('notifications.errorTitle'),
@@ -110,6 +129,20 @@ export function ContactForm() {
               {...form.getInputProps('mensaje')}
             />
           </div>
+          {RECAPTCHA_SITE_KEY ? (
+            <div style={{ marginTop: '24px' }}>
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={RECAPTCHA_SITE_KEY}
+                onChange={(token) => setCaptchaToken(token)}
+                onExpired={() => setCaptchaToken(null)}
+              />
+            </div>
+          ) : (
+            <p style={{ marginTop: '24px', color: '#999', fontSize: '14px' }}>
+              reCAPTCHA no configurado (falta NEXT_PUBLIC_RECAPTCHA_SITE_KEY)
+            </p>
+          )}
         </Grid.Col>
         {/* Institutional text */}
         <Grid.Col span={{ base: 12, md: 4 }} className={styles.messageContainer}>
