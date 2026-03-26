@@ -49,6 +49,9 @@
   .header {
     padding: 50px;
     background-color: #fbfbfb;
+    background: #fbfbfb;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
 
   .nav {
@@ -63,10 +66,13 @@
     left: 0;
     right: 0;
     background-color: #fbfbfb;
+    background: #fbfbfb;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     z-index: 20;
     padding-bottom: 30px;
     width: 100%;
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
   }
 
   .langDesktop {
