@@ -29,14 +29,21 @@ export default function Hero() {
 
     if (!hero || !logo || isMobile) return
 
+    const isShortViewport = window.innerHeight < 730
+    const logoWidth = window.innerWidth * 0.26
+    const logoHeight = isShortViewport
+      ? window.innerWidth * 0.115
+      : window.innerWidth * 0.156
+    const logoTop = isShortViewport ? '25%' : '30%'
+
     gsap.set(logo, {
       position: 'absolute',
-      top: '30%',
+      top: logoTop,
       left: '50%',
       xPercent: -50,
       yPercent: -50,
-      width: '500px',
-      height: '300px',
+      width: `${logoWidth}px`,
+      height: `${logoHeight}px`,
       zIndex: 10
     })
 

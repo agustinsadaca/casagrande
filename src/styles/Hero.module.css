@@ -28,14 +28,21 @@
 
 .logoStickyWrapper {
   position: absolute;
-  width: 500px;
-  height: 300px;
+  width: 26vw;
+  height: 15.6vw;
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
   will-change: transform, width, height, top, left;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-height: 730px) and (min-width: 1025px) {
+  .logoStickyWrapper {
+    height: 11.5vw;
+    top: 25%;
+  }
 }
 
 .logoStickyWrapper.sticky {

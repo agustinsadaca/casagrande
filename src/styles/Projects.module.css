@@ -117,7 +117,16 @@
   .projectsSection {
     padding: 20px;
   }
+}
 
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+  .imageRow {
+    gap: 40px;
+  }
+
+  .imageProjects {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
