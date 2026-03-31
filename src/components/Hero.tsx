@@ -30,10 +30,8 @@ export default function Hero() {
     if (!hero || !logo || isMobile) return
 
     const isShortViewport = window.innerHeight < 730
-    const logoWidth = Math.min(window.innerWidth * 0.26, 500)
-    const logoHeight = isShortViewport
-      ? Math.min(window.innerWidth * 0.115, 220)
-      : Math.min(window.innerWidth * 0.156, 300)
+    const logoWidth = 500
+    const logoHeight = isShortViewport ? 220 : 300
     const logoTop = isShortViewport ? '25%' : '30%'
 
     gsap.set(logo, {
