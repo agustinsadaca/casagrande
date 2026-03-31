@@ -48,7 +48,7 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer className={styles.footer} style={{ paddingLeft: isHomePage && !isMobile ? '180px' : 'auto' }}>
+    <footer className={styles.footer}>
       <div style={{
         display: 'flex',
         justifyContent: 'center',
@@ -78,6 +78,18 @@ export default function Footer() {
           styles={buttonStyles}
         >
           <IconsFooter iconName="facebook" />
+        </Button>
+
+        <Button
+          component="a"
+          href="https://www.linkedin.com/company/casagrande-ingenieria/"
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="transparent"
+          p={0}
+          styles={buttonStyles}
+        >
+          <IconsFooter iconName="linkedin" />
         </Button>
 
         <Button
