@@ -21,6 +21,11 @@
   font-size: 21px;
 }
 
+.image {
+  width: 170px;
+  height: 60px;
+}
+
 .langDesktop {
   position: absolute;
   right: 75px;
