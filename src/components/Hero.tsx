@@ -87,8 +87,8 @@ export default function Hero() {
       left: '60px',
       xPercent: 0,
       yPercent: 0,
-      width: '196px',
-      height: '84px',
+      width: '170px',
+      height: '60px',
       zIndex: 100,
       ease: 'power2.inOut'
     })

@@ -7,7 +7,13 @@
       "Bash(tasklist)",
       "Bash(curl -s http://localhost:3000/es)",
       "Bash(npm install:*)",
-      "Bash(npm view:*)"
+      "Bash(npm view:*)",
+      "Bash(curl -s http://localhost:3000/sitemap.xml)",
+      "Bash(curl -s http://localhost:3000/es/project/casa-mdt)",
+      "Bash(curl -s http://localhost:3000/es/projects)",
+      "Bash(node -e ':*)",
+      "Bash(curl -s http://localhost:3000/es/contact)",
+      "Bash(curl -s http://localhost:3000/es/office)"
     ]
   }
 }

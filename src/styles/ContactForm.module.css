@@ -53,6 +53,12 @@
   margin-top: 60px;
 }
 
+@media screen and (max-width: 1280px) {
+  .contactForm {
+    padding: 30px 80px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contactForm {
     padding: 30px 20px;

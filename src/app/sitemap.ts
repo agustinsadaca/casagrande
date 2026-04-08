@@ -2,101 +2,95 @@ import fs from 'fs'
 import type { MetadataRoute } from 'next'
 import path from 'path'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://casagrandeing.com'
+const baseUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://casagrandeing.com').replace(/\/$/, '')
 
-// Paths to exclude from the sitemap
-const bannedPaths = [
-  '/admin', '/api', '/layout', '/view', '/preload-resources'
-]
+const langs = ['es', 'en']
 
-// Important static paths with higher priority
-const importantPaths = [
-  '/', '/proyectos', '/servicios', '/contacto'
-]
+const bannedSegments = ['/admin', '/api', '/layout', '/routing-test']
 
-const getProjectPaths = (): string[] => {
+const staticPriority: Record<string, number> = {
+  '/': 0.9,
+  '/proyectos': 0.8,
+  '/servicios': 0.8,
+  '/contacto': 0.8,
+  '/oficina': 0.7,
+}
+
+const staticChangeFreq: Record<string, MetadataRoute.Sitemap[number]['changeFrequency']> = {
+  '/': 'daily',
+  '/proyectos': 'weekly',
+  '/servicios': 'weekly',
+  '/contacto': 'weekly',
+}
+
+function getProjectIds(): string[] {
   try {
-    const projectsFile = path.join(process.cwd(), 'public/data/projects.es.json')
-    const projectsData = JSON.parse(fs.readFileSync(projectsFile, 'utf8'))
-    return projectsData.map((project: { id: string }) => `/project/${project.id}`)
-  } catch (error) {
-    console.warn('Could not load project paths:', error)
+    const file = path.join(process.cwd(), 'public/data/projects.es.json')
+    const data = JSON.parse(fs.readFileSync(file, 'utf8'))
+    return data.map((p: { id: string }) => p.id)
+  } catch {
     return []
   }
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = getRoutes()
-  const projectPaths = getProjectPaths()
-
-  // Filter out banned paths
-  const filteredRoutes = routes.filter(route =>
-    !bannedPaths.some(bp => route.includes(bp))
-  )
-
-  // Create sitemap entries with varied priorities based on importance
-  const sitemapEntries = filteredRoutes.map(route => {
-    // Determine priority based on path importance
-    const priority =
-      route === '/' ? 0.9 :  // Homepage gets highest priority
-        importantPaths.includes(route) ? 0.8 : // Important sections
-          projectPaths.includes(route) ? 0.7 :   // Project pages
-            0.5                                   // Other pages
-
-    // Determine change frequency based on content type
-    const changeFrequency =
-      route === '/' ? 'daily' as const :
-        importantPaths.includes(route) ? 'weekly' as const :
-          'monthly' as const
-
-    return {
-      url: `${baseUrl}${route}`,
-      lastModified: new Date(),
-      changeFrequency: changeFrequency,
-      priority: priority
-    }
-  })
-
-  // Add language variants for important pages
-  const languageVariants = ['en', 'es'].flatMap(lang =>
-    importantPaths.map(route => ({
-      url: `${baseUrl}/${lang}${route === '/' ? '' : route}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7
-    }))
-  )
-
-  return [
-    ...sitemapEntries,
-    ...languageVariants
-  ]
-}
-
-function getRoutes() {
+function getStaticRoutes(): string[] {
   const routesDir = path.join(process.cwd(), 'src/app/[lang]')
-  const routes = traverseRoutes(routesDir)
-  return routes.map(route =>
-    route.replace(process.cwd() + '/src/app/[lang]', '')
-      .replace('.tsx', '')
-      .replace('/page', '') || '/'
-  )
+  return traversePages(routesDir, routesDir)
 }
 
-function traverseRoutes(dir: string): string[] {
-  let results: string[] = []
+function traversePages(baseDir: string, dir: string): string[] {
+  const results: string[] = []
   const list = fs.readdirSync(dir)
 
-  list.forEach(file => {
-    file = path.join(dir, file)
-    const stat = fs.statSync(file)
+  for (const file of list) {
+    const fullPath = path.join(dir, file)
+    const stat = fs.statSync(fullPath)
 
-    if (stat && stat.isDirectory()) {
-      results = results.concat(traverseRoutes(file))
-    } else if (file.endsWith('.tsx')) {
-      results.push(file)
+    if (stat.isDirectory()) {
+      // Skip dynamic project route — expanded separately
+      if (file === '[projectName]') continue
+      results.push(...traversePages(baseDir, fullPath))
+    } else if (file === 'page.tsx') {
+      // Convert to URL path
+      const relative = fullPath
+        .replace(baseDir, '')
+        .replace(/\\/g, '/')
+        .replace('/page.tsx', '') || '/'
+      results.push(relative)
     }
-  })
+  }
 
   return results
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticRoutes = getStaticRoutes().filter(
+    route => !bannedSegments.some(banned => route.startsWith(banned))
+  )
+  const projectIds = getProjectIds()
+  const lastModified = new Date()
+  const entries: MetadataRoute.Sitemap = []
+
+  for (const lang of langs) {
+    for (const route of staticRoutes) {
+      const url = `${baseUrl}/${lang}${route === '/' ? '' : route}`
+      entries.push({
+        url,
+        lastModified,
+        changeFrequency: staticChangeFreq[route] ?? 'monthly',
+        priority: staticPriority[route] ?? 0.5,
+      })
+    }
+
+    for (const id of projectIds) {
+      entries.push({
+        url: `${baseUrl}/${lang}/project/${id}`,
+        lastModified,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      })
+    }
+  }
+
+  return entries
 }

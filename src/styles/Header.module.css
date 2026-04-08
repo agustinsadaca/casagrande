@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 120px 50px 70px;
+  padding: 30px 120px 30px 70px;
   font-family: 'Unageo Regular', sans-serif;
   position: sticky;
   top: 0;
@@ -41,7 +41,7 @@
   display: none;
 }
 
-@media (min-width: 1025px) and (max-width: 1300px) {
+@media (min-width: 1025px) and (max-width: 1910px) {
   .nav {
     margin-right: 100px;
   }

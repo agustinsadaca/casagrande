@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     default: "CASAGRANDE INGENIERIA - Consultoría de Ingeniería Estructural",
     template: "%s | CASAGRANDE"
   },
-  description: "Consultoría de Ingeniería Estructural",
+  description: "Ingeniería estructural en Mendoza, Argentina. Cálculo de estructuras, instalaciones y dirección técnica para proyectos de arquitectura residencial y comercial.",
   alternates: {
     canonical: siteUrl,
     languages: {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "CASAGRANDE INGENIERIA",
-    description: "Consultoría de Ingeniería Estructural",
+    description: "Ingeniería estructural en Mendoza, Argentina. Cálculo de estructuras, instalaciones y dirección técnica para proyectos de arquitectura residencial y comercial.",
     url: siteUrl,
     siteName: "CASAGRANDE INGENIERIA",
     images: [
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'CASAGRANDE INGENIERIA',
-    description: 'Consultoría de Ingeniería Estructural',
+    description: 'Ingeniería estructural en Mendoza, Argentina. Cálculo de estructuras, instalaciones y dirección técnica para proyectos de arquitectura residencial y comercial.',
     images: [{
       url: `${siteUrl}/og-image.png`,
       width: 1200,
@@ -109,7 +109,7 @@ export default async function LocaleLayout({ children }: { children: React.React
     name: 'CASAGRANDE INGENIERIA',
     url: siteUrl,
     logo: `${siteUrl}/logo.svg`,
-    description: 'Consultoría de Ingeniería Estructural',
+    description: 'Ingeniería estructural en Mendoza, Argentina. Cálculo de estructuras, instalaciones y dirección técnica para proyectos de arquitectura residencial y comercial.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Mendoza',

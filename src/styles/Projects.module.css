@@ -66,6 +66,7 @@
   transition: filter 0.3s ease;
   display: block;
   aspect-ratio: 1 / 1;
+  height: auto;
 }
 
 .imageRow:hover .imageProjects {
@@ -126,6 +127,11 @@
 
   .imageProjects {
     width: 100%;
+    height: auto;
+  }
+
+  .projectCard {
+    margin-bottom: 80px;
   }
 }
 
@@ -159,6 +165,7 @@
 
   .imageProjects {
     width: 389px !important;
+    height: auto !important;
     filter: grayscale(0%) !important;
   }
 }
