@@ -20,12 +20,11 @@
         "description": [
           "Structural calculation",
           "Plumbing installations",
-          "Gas installations",
           "Structural technical management"
         ]
       },
-      "area": { "title": "Area", "description": "225 m²" },
-      "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
+      "area": { "title": "Area", "description": "515 m²" },
+      "ubication": { "title": "Location", "description": "Barrio Mendoza Norte, Las Heras, Mendoza, Argentina" },
       "material": { "title": "Materials", "description": "Traditional construction" }
     }
   },
@@ -38,7 +37,7 @@
       "/projects/398x398/2_A_Mauricio Bonada_398.webp"
     ],
     "projectName": "Casa Bonada Project",
-    "subtitle": "Mauricio Bonada",
+    "subtitle": "Arch. Mauricio Bonada",
     "imageDetailUrls": [
       "/projects/2_A_Mauricio_Bonada__COLOR.webp",
       "/projects/2_B_Mauricio_Bonada__COLOR.webp"
@@ -47,15 +46,12 @@
       "project": {
         "title": "Project",
         "description": [
-          "Structural calculation",
-          "Plumbing installations",
-          "Gas installations",
-          "Structural technical management"
+          "Structural calculation"
         ]
       },
-      "area": { "title": "Area", "description": "225 m²" },
-      "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Traditional construction" }
+      "area": { "title": "Area", "description": "94 m²" },
+      "ubication": { "title": "Location", "description": "Guaymallén, Mendoza, Argentina" },
+      "material": { "title": "Materials", "description": "Dry construction" }
     }
   },
   {
@@ -78,25 +74,24 @@
         "description": [
           "Structural calculation",
           "Plumbing installations",
-          "Gas installations",
-          "Structural technical management"
+          "Gas installations"
         ]
       },
-      "area": { "title": "Area", "description": "225 m²" },
+      "area": { "title": "Area", "description": "257.80 m²" },
       "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
       "material": { "title": "Materials", "description": "Traditional construction" }
     }
   },
   {
-    "id": "casa-cuello",
+    "id": "Casa Cubo",
     "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/4_A_Emiliano Cuello_398.webp",
       "/projects/398x398/4_B_Emiliano Cuello_398.webp",
       "/projects/398x398/4_C_Emiliano Cuello_398.webp"
     ],
-    "projectName": "Casa Cuello Project",
-    "subtitle": "Emiliano Cuello",
+    "projectName": "Casa Cubo Project",
+    "subtitle": "Arch. Emiliano Cuello",
     "imageDetailUrls": [
       "/projects/4_A_Emiliano_Cuello__COLOR.webp",
       "/projects/4_B_Emiliano_Cuello__COLOR.webp",
@@ -106,27 +101,24 @@
       "project": {
         "title": "Project",
         "description": [
-          "Structural calculation",
-          "Plumbing installations",
-          "Gas installations",
-          "Structural technical management"
+          "Structural calculation"
         ]
       },
-      "area": { "title": "Area", "description": "225 m²" },
-      "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Traditional construction" }
+      "area": { "title": "Area", "description": "122.61 m²" },
+      "ubication": { "title": "Location", "description": "Maipú, Mendoza, Argentina" },
+      "material": { "title": "Materials", "description": "Dry construction" }
     }
   },
   {
-    "id": "casa-titos",
+    "id": "Sector Fuego",
     "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/5_A_Titos_Tañez_Wolf_398.webp",
       "/projects/398x398/5_B_Titos_Tañez_Wolf_398.webp",
       "/projects/398x398/5_C_Titos_Tañez_Wolf_398.webp"
     ],
-    "projectName": "Casa Titos Project",
-    "subtitle": "Titos Tañez Wolf",
+    "projectName": "Sector Fuego Project",
+    "subtitle": "Arch. Jimena Tañez, Arch. Ezequiel Titos",
     "imageDetailUrls": [
       "/projects/5_A_Titos_Tañez_Wolf__COLOR.webp",
       "/projects/5_B_Titos_Tañez_Wolf__COLOR.webp",
@@ -136,13 +128,9 @@
       "project": {
         "title": "Project",
         "description": [
-          "Structural calculation",
-          "Plumbing installations",
-          "Gas installations",
-          "Structural technical management"
+          "Structural calculation"
         ]
       },
-      "area": { "title": "Area", "description": "225 m²" },
       "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
       "material": { "title": "Materials", "description": "Traditional construction" }
     }
@@ -157,7 +145,7 @@
       "/projects/398x398/6_D_Arcos_398.webp"
     ],
     "projectName": "Casa Arcos Project",
-    "subtitle": "Arcos Architecture",
+    "subtitle": "Arch. Facundo Arboit, Arch. Ezequiel Titos",
     "imageDetailUrls": [
       "/projects/6_A_Arcos___COLOR.webp",
       "/projects/6_b_Arcos__COLOR.webp",
@@ -168,14 +156,11 @@
       "project": {
         "title": "Project",
         "description": [
-          "Structural calculation",
-          "Plumbing installations",
-          "Gas installations",
-          "Structural technical management"
+          "Structural calculation"
         ]
       },
-      "area": { "title": "Area", "description": "225 m²" },
-      "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
+      "area": { "title": "Area", "description": "123 m²" },
+      "ubication": { "title": "Location", "description": "Chacras de Coria, Luján de Cuyo, Mendoza, Argentina" },
       "material": { "title": "Materials", "description": "Traditional construction" }
     }
   },
@@ -187,7 +172,7 @@
       "/projects/398x398/7_B_Manuel Rico_398.webp",
       "/projects/398x398/7_C_Manuel Rico_398.webp"
     ],
-    "projectName": "Casa Rico Project",
+    "projectName": "Casa JP Project",
     "subtitle": "Manuel Rico",
     "imageDetailUrls": [
       "/projects/7_A_Manuel_Rico__COLOR.webp",
@@ -200,14 +185,12 @@
         "title": "Project",
         "description": [
           "Structural calculation",
-          "Plumbing installations",
-          "Gas installations",
           "Structural technical management"
         ]
       },
-      "area": { "title": "Area", "description": "225 m²" },
-      "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Traditional construction" }
+      "area": { "title": "Area", "description": "185 m²" },
+      "ubication": { "title": "Location", "description": "Barrio El Portillo de Terrada, Luján de Cuyo, Mendoza, Argentina" },
+      "material": { "title": "Materials", "description": "Cassaforma System" }
     }
   },
   {
@@ -218,7 +201,7 @@
       "/projects/398x398/8_B_Eduardo Carleti_398.webp",
       "/projects/398x398/8_C_Eduardo Carleti_398.webp"
     ],
-    "projectName": "Casa Carleti Project",
+    "projectName": "DR Project",
     "subtitle": "Eduardo Carleti",
     "imageDetailUrls": [
       "/projects/8_A_Eduardo_Carleti__COLOR.webp",
@@ -232,13 +215,11 @@
         "title": "Project",
         "description": [
           "Structural calculation",
-          "Plumbing installations",
-          "Gas installations",
           "Structural technical management"
         ]
       },
-      "area": { "title": "Area", "description": "225 m²" },
-      "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
+      "area": { "title": "Area", "description": "335 m²" },
+      "ubication": { "title": "Location", "description": "Barrio Rincón de Viamonte, Luján de Cuyo, Mendoza, Argentina" },
       "material": { "title": "Materials", "description": "Traditional construction" }
     }
   }

@@ -20,12 +20,11 @@
         "description": [
           "Cálculo de estructura",
           "Instalaciones sanitarias",
-          "Instalaciones de gas",
           "Dirección técnica estructural"
         ]
       },
-      "area": { "title": "Superficie", "description": "225 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
+      "area": { "title": "Superficie", "description": "515 m²" },
+      "ubication": { "title": "Ubicación", "description": "Barrio Mendoza Norte, Las Heras, Mendoza, Argentina" },
       "material": { "title": "Materialidad", "description": "Construcción tradicional" }
     }
   },
@@ -38,7 +37,7 @@
       "/projects/398x398/2_A_Mauricio Bonada_398.webp"
     ],
     "projectName": "Proyecto Casa Bonada",
-    "subtitle": "Mauricio Bonada",
+    "subtitle": "Arq. Mauricio Bonada",
     "imageDetailUrls": [
       "/projects/2_A_Mauricio_Bonada__COLOR.webp",
       "/projects/2_B_Mauricio_Bonada__COLOR.webp"
@@ -47,15 +46,12 @@
       "project": {
         "title": "Proyecto",
         "description": [
-          "Cálculo de estructura",
-          "Instalaciones sanitarias",
-          "Instalaciones de gas",
-          "Dirección técnica estructural"
+          "Cálculo de estructura"
         ]
       },
-      "area": { "title": "Superficie", "description": "225 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción tradicional" }
+      "area": { "title": "Superficie", "description": "94 m²" },
+      "ubication": { "title": "Ubicación", "description": "Guaymallén, Mendoza, Argentina" },
+      "material": { "title": "Materialidad", "description": "Construcción en seco" }
     }
   },
   {
@@ -67,7 +63,7 @@
       "/projects/398x398/3_A_LDA_398.webp"
     ],
     "projectName": "Proyecto Casa CL",
-    "subtitle": "LDA arquitectas",
+    "subtitle": "LDA Arquitectas",
     "imageDetailUrls": [
       "/projects/3_A_LDA_COLOR.webp",
       "/projects/3_B_LDA_COLOR.webp"
@@ -78,25 +74,24 @@
         "description": [
           "Cálculo de estructura",
           "Instalaciones sanitarias",
-          "Instalaciones de gas",
-          "Dirección técnica estructural"
+          "Instalaciones de gas"
         ]
       },
-      "area": { "title": "Superficie", "description": "225 m²" },
+      "area": { "title": "Superficie", "description": "257.80 m²" },
       "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
       "material": { "title": "Materialidad", "description": "Construcción tradicional" }
     }
   },
   {
-    "id": "casa-cuello",
+    "id": "Casa Cubo",
     "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/4_A_Emiliano Cuello_398.webp",
       "/projects/398x398/4_B_Emiliano Cuello_398.webp",
       "/projects/398x398/4_C_Emiliano Cuello_398.webp"
     ],
-    "projectName": "Proyecto Casa Cuello",
-    "subtitle": "Emiliano Cuello",
+    "projectName": "Proyecto Casa Cubo",
+    "subtitle": "Arq. Emiliano Cuello",
     "imageDetailUrls": [
       "/projects/4_A_Emiliano_Cuello__COLOR.webp",
       "/projects/4_B_Emiliano_Cuello__COLOR.webp",
@@ -106,27 +101,24 @@
       "project": {
         "title": "Proyecto",
         "description": [
-          "Cálculo de estructura",
-          "Instalaciones sanitarias",
-          "Instalaciones de gas",
-          "Dirección técnica estructural"
+          "Cálculo de estructura"
         ]
       },
-      "area": { "title": "Superficie", "description": "225 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción tradicional" }
+      "area": { "title": "Superficie", "description": "122.61 m²" },
+      "ubication": { "title": "Ubicación", "description": "Maipú, Mendoza, Argentina" },
+      "material": { "title": "Materialidad", "description": "Construcción en seco" }
     }
   },
   {
-    "id": "casa-titos",
+    "id": "Sector Fuego",
     "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/5_A_Titos_Tañez_Wolf_398.webp",
       "/projects/398x398/5_B_Titos_Tañez_Wolf_398.webp",
       "/projects/398x398/5_C_Titos_Tañez_Wolf_398.webp"
     ],
-    "projectName": "Proyecto Casa Titos",
-    "subtitle": "Titos Tañez Wolf",
+    "projectName": "Proyecto Sector Fuego",
+    "subtitle": "Arq. Jimena Tañez, Arq. Ezequiel Titos",
     "imageDetailUrls": [
       "/projects/5_A_Titos_Tañez_Wolf__COLOR.webp",
       "/projects/5_B_Titos_Tañez_Wolf__COLOR.webp",
@@ -136,13 +128,9 @@
       "project": {
         "title": "Proyecto",
         "description": [
-          "Cálculo de estructura",
-          "Instalaciones sanitarias",
-          "Instalaciones de gas",
-          "Dirección técnica estructural"
+          "Cálculo de estructura"
         ]
       },
-      "area": { "title": "Superficie", "description": "225 m²" },
       "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
       "material": { "title": "Materialidad", "description": "Construcción tradicional" }
     }
@@ -157,7 +145,7 @@
       "/projects/398x398/6_D_Arcos_398.webp"
     ],
     "projectName": "Proyecto Casa Arcos",
-    "subtitle": "Arcos Arquitectura",
+    "subtitle": "Arq. Facundo Arboit, Arq. Ezequiel Titos",
     "imageDetailUrls": [
       "/projects/6_A_Arcos___COLOR.webp",
       "/projects/6_b_Arcos__COLOR.webp",
@@ -168,14 +156,11 @@
       "project": {
         "title": "Proyecto",
         "description": [
-          "Cálculo de estructura",
-          "Instalaciones sanitarias",
-          "Instalaciones de gas",
-          "Dirección técnica estructural"
+          "Cálculo de estructura"
         ]
       },
-      "area": { "title": "Superficie", "description": "225 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
+      "area": { "title": "Superficie", "description": "123 m²" },
+      "ubication": { "title": "Ubicación", "description": "Chacras de Coria, Luján de Cuyo, Mendoza, Argentina" },
       "material": { "title": "Materialidad", "description": "Construcción tradicional" }
     }
   },
@@ -187,7 +172,7 @@
       "/projects/398x398/7_B_Manuel Rico_398.webp",
       "/projects/398x398/7_C_Manuel Rico_398.webp"
     ],
-    "projectName": "Proyecto Casa Rico",
+    "projectName": "Proyecto Casa JP",
     "subtitle": "Manuel Rico",
     "imageDetailUrls": [
       "/projects/7_A_Manuel_Rico__COLOR.webp",
@@ -200,14 +185,12 @@
         "title": "Proyecto",
         "description": [
           "Cálculo de estructura",
-          "Instalaciones sanitarias",
-          "Instalaciones de gas",
           "Dirección técnica estructural"
         ]
       },
-      "area": { "title": "Superficie", "description": "225 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción tradicional" }
+      "area": { "title": "Superficie", "description": "185 m²" },
+      "ubication": { "title": "Ubicación", "description": "Barrio El Portillo de Terrada, Luján de Cuyo, Mendoza, Argentina" },
+      "material": { "title": "Materialidad", "description": "Sistema Cassaforma" }
     }
   },
   {
@@ -218,7 +201,7 @@
       "/projects/398x398/8_B_Eduardo Carleti_398.webp",
       "/projects/398x398/8_C_Eduardo Carleti_398.webp"
     ],
-    "projectName": "Proyecto Casa Carleti",
+    "projectName": "Proyecto DR",
     "subtitle": "Eduardo Carleti",
     "imageDetailUrls": [
       "/projects/8_A_Eduardo_Carleti__COLOR.webp",
@@ -232,13 +215,11 @@
         "title": "Proyecto",
         "description": [
           "Cálculo de estructura",
-          "Instalaciones sanitarias",
-          "Instalaciones de gas",
           "Dirección técnica estructural"
         ]
       },
-      "area": { "title": "Superficie", "description": "225 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
+      "area": { "title": "Superficie", "description": "335 m²" },
+      "ubication": { "title": "Ubicación", "description": "Barrio Rincón de Viamonte, Luján de Cuyo, Mendoza, Argentina" },
       "material": { "title": "Materialidad", "description": "Construcción tradicional" }
     }
   }
