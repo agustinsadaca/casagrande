@@ -13,7 +13,7 @@ export async function generateMetadata(
     title: isEs ? 'Proyectos' : 'Projects',
     description: isEs
       ? 'Portfolio de ingeniería estructural: viviendas, edificios y proyectos de arquitectura en Mendoza, Argentina. Cálculo de estructuras e instalaciones.'
-      : 'Structural engineering portfolio: houses, buildings and architecture projects in Mendoza, Argentina. Structural calculation and installations.',
+      : 'Structural engineering portfolio: houses, buildings and architecture projects in Mendoza, Argentina. Structural analysis and installations.',
     alternates: {
       canonical: `${siteUrl}/${lang}/projects`,
       languages: {
