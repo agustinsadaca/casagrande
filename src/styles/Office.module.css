@@ -1,0 +1,90 @@
+.officeSection {
+  padding-top: 100px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.blockTitle {
+  color: #131313;
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d0d0d0;
+  max-width: 640px;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 640px;
+}
+
+.paragraph {
+  color: #424242;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 640px;
+}
+
+.serviceGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.serviceItem {
+  color: #424242;
+  line-height: 1.6;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.serviceItem::before {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #9A9A9A;
+  flex-shrink: 0;
+  margin-top: 9px;
+}
+
+@media screen and (max-width: 1024px) {
+  .officeSection {
+    padding-top: 56px;
+    padding-bottom: 80px;
+    gap: 56px;
+  }
+
+  .block {
+    gap: 20px;
+  }
+
+  .blockTitle {
+    max-width: 100%;
+  }
+
+  .textContent {
+    max-width: 100%;
+  }
+
+  .paragraph {
+    max-width: 100%;
+  }
+
+}

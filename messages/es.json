@@ -5,7 +5,15 @@
     "contact": "CONTACTO"
   },
   "office": {
-    "text": "En Casagrande Ingeniería desarrollamos soluciones estructurales para proyectos de arquitectura, integrando análisis técnico, experiencia constructiva y una mirada atenta al proceso de obra."
+    "text": "En Casagrande Ingeniería desarrollamos soluciones estructurales para proyectos de arquitectura, integrando análisis técnico, experiencia constructiva y una mirada atenta al proceso de obra.",
+    "whoWeAreTitle": "Quiénes Somos",
+    "whoWeAreText": "Somos un estudio de ingeniería estructural ubicado en Mendoza, Argentina, especializado en el cálculo y desarrollo de viviendas, edificios y naves industriales.\n\nCon una visión contemporánea de la ingeniería, trabajamos en proyectos donde la precisión técnica, la eficiencia estructural y la calidad constructiva forman parte esencial de la arquitectura. Desarrollamos cada obra de manera integral, buscando soluciones claras, eficientes y adaptadas a las necesidades específicas de cada desafío.",
+    "whatWeDoTitle": "Qué Hacemos",
+    "whatWeDoIntro": "Participamos en el diseño y cálculo de estructuras de hormigón armado, acero y sistemas constructivos industrializados, abordando:",
+    "whatWeDoItem1": "Proyectos residenciales y viviendas unifamiliares.",
+    "whatWeDoItem2": "Edificios multifamiliares y desarrollos urbanos.",
+    "whatWeDoItem3": "Locales comerciales y arquitectura comercial.",
+    "whatWeDoItem4": "Galpones y naves industriales."
   },
   "projects": {
     "seeMore": "VER MÁS"

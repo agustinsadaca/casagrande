@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
+import styles from '@/styles/Office.module.css'
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://casagrandeing.com').replace(/\/$/, '')
 
@@ -27,11 +28,45 @@ export async function generateMetadata(
 export default async function OfficePage() {
   const t = await getTranslations('office')
 
+  const whatWeDoItems = [
+    t('whatWeDoItem1'),
+    t('whatWeDoItem2'),
+    t('whatWeDoItem3'),
+    t('whatWeDoItem4'),
+  ]
+
   return (
-    <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh', padding: '0 11%' }}>
-      <p className="fontUnageoRegularSemiBold fs24" style={{ textAlign: 'center' }}>
-        {t('text')}
-      </p>
+    <section className={styles.officeSection}>
+
+      <div className={styles.block}>
+        <h2 className={`fontUnageoRegularBold fs36 ${styles.blockTitle}`}>
+          {t('whoWeAreTitle')}
+        </h2>
+        <div className={styles.textContent}>
+          {t('whoWeAreText').split('\n\n').map((paragraph, i) => (
+            <p key={i} className={`fontUnageoRegular fs18 ${styles.paragraph}`}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.block}>
+        <h2 className={`fontUnageoRegularBold fs36 ${styles.blockTitle}`}>
+          {t('whatWeDoTitle')}
+        </h2>
+        <p className={`fontUnageoRegular fs18 ${styles.paragraph}`}>
+          {t('whatWeDoIntro')}
+        </p>
+        <ul className={styles.serviceGrid}>
+          {whatWeDoItems.map((item, i) => (
+            <li key={i} className={`fontUnageoRegular fs16 ${styles.serviceItem}`}>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
     </section>
   )
 }
