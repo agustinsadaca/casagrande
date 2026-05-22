@@ -7,12 +7,12 @@
   "office": {
     "text": "At Casagrande Ingeniería we develop structural solutions for architecture projects, integrating technical analysis, building expertise, and close attention to the construction process.",
     "whoWeAreTitle": "Who We Are",
-    "whoWeAreText": "We are a structural engineering studio located in Mendoza, Argentina, specialized in the calculation and development of residential buildings, multi-story buildings, and industrial warehouses.\n\nWith a contemporary vision of engineering, we work on projects where technical precision, structural efficiency, and construction quality are essential parts of architecture. We develop each project in a comprehensive manner, seeking clear, efficient solutions tailored to the specific needs of each challenge.",
+    "whoWeAreText": "We are a structural engineering studio located in Mendoza, Argentina, specialized in the design and development of residential buildings, multi-story buildings, and industrial warehouses.\n\nWith a contemporary vision of engineering, we work on projects where technical precision, structural efficiency, and construction quality are integral to the architecture. We approach each project comprehensively, delivering clear, efficient solutions tailored to the specific demands of each commission.",
     "whatWeDoTitle": "What We Do",
-    "whatWeDoIntro": "We participate in the design and calculation of reinforced concrete, steel, and industrialized construction systems, addressing:",
-    "whatWeDoItem1": "Residential projects and single-family homes.",
+    "whatWeDoIntro": "We specialize in the structural design and analysis of reinforced concrete, steel, and industrialized construction systems, including:",
+    "whatWeDoItem1": "Single-family homes and residential buildings.",
     "whatWeDoItem2": "Multi-family buildings and urban developments.",
-    "whatWeDoItem3": "Commercial spaces and commercial architecture.",
+    "whatWeDoItem3": "Commercial buildings and mixed-use developments.",
     "whatWeDoItem4": "Warehouses and industrial facilities."
   },
   "projects": {
