@@ -24,10 +24,10 @@ export default function Header() {
 
   return (
     <header className={`${styles.header} ${isDark ? styles.dark : styles.light}`}>
-      {isMobile && (<Link href="/" className={styles.logo}>
+      {isMobile && (<Link href={`/${locale}`} className={styles.logo}>
         CASAGRANDE<br />INGENIERIA
       </Link>)}
-      {!isMobile && !isHomePage && (<Link href="/" >
+      {!isMobile && !isHomePage && (<Link href={`/${locale}`} >
         <Image
           src="/logo.svg"
           alt="Logo"
