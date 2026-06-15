@@ -23,9 +23,18 @@
           "Structural technical management"
         ]
       },
-      "area": { "title": "Area", "description": "515 m²" },
-      "ubication": { "title": "Location", "description": "Barrio Mendoza Norte, Las Heras, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Traditional construction" }
+      "area": {
+        "title": "Area",
+        "description": "515 m²"
+      },
+      "ubication": {
+        "title": "Location",
+        "description": "Barrio Mendoza Norte, Las Heras, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materials",
+        "description": "Traditional construction"
+      }
     }
   },
   {
@@ -49,9 +58,18 @@
           "Structural analysis"
         ]
       },
-      "area": { "title": "Area", "description": "94 m²" },
-      "ubication": { "title": "Location", "description": "Guaymallén, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Dry construction" }
+      "area": {
+        "title": "Area",
+        "description": "94 m²"
+      },
+      "ubication": {
+        "title": "Location",
+        "description": "Guaymallén, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materials",
+        "description": "Dry construction"
+      }
     }
   },
   {
@@ -77,14 +95,23 @@
           "Gas installations"
         ]
       },
-      "area": { "title": "Area", "description": "257.80 m²" },
-      "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Traditional construction" }
+      "area": {
+        "title": "Area",
+        "description": "257.80 m²"
+      },
+      "ubication": {
+        "title": "Location",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materials",
+        "description": "Traditional construction"
+      }
     }
   },
   {
     "id": "Casa Cubo",
-    "visible": true,
+    "visible": false,
     "imageHomeUrls": [
       "/projects/398x398/4_A_Emiliano Cuello_398.webp",
       "/projects/398x398/4_B_Emiliano Cuello_398.webp",
@@ -104,14 +131,23 @@
           "Structural analysis"
         ]
       },
-      "area": { "title": "Area", "description": "122.61 m²" },
-      "ubication": { "title": "Location", "description": "Maipú, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Dry construction" }
+      "area": {
+        "title": "Area",
+        "description": "122.61 m²"
+      },
+      "ubication": {
+        "title": "Location",
+        "description": "Maipú, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materials",
+        "description": "Dry construction"
+      }
     }
   },
   {
     "id": "Sector Fuego",
-    "visible": true,
+    "visible": false,
     "imageHomeUrls": [
       "/projects/398x398/5_A_Titos_Tañez_Wolf_398.webp",
       "/projects/398x398/5_B_Titos_Tañez_Wolf_398.webp",
@@ -131,13 +167,19 @@
           "Structural analysis"
         ]
       },
-      "ubication": { "title": "Location", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Traditional construction" }
+      "ubication": {
+        "title": "Location",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materials",
+        "description": "Traditional construction"
+      }
     }
   },
   {
     "id": "casa-arcos",
-    "visible": true,
+    "visible": false,
     "imageHomeUrls": [
       "/projects/398x398/6_A_Arcos_398.webp",
       "/projects/398x398/6_B_Arcos_398.webp",
@@ -159,14 +201,23 @@
           "Structural analysis"
         ]
       },
-      "area": { "title": "Area", "description": "123 m²" },
-      "ubication": { "title": "Location", "description": "Chacras de Coria, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Traditional construction" }
+      "area": {
+        "title": "Area",
+        "description": "123 m²"
+      },
+      "ubication": {
+        "title": "Location",
+        "description": "Chacras de Coria, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materials",
+        "description": "Traditional construction"
+      }
     }
   },
   {
     "id": "casa-rico",
-    "visible": true,
+    "visible": false,
     "imageHomeUrls": [
       "/projects/398x398/7_A_Manuel Rico_398.webp",
       "/projects/398x398/7_B_Manuel Rico_398.webp",
@@ -188,9 +239,18 @@
           "Structural technical management"
         ]
       },
-      "area": { "title": "Area", "description": "185 m²" },
-      "ubication": { "title": "Location", "description": "Barrio El Portillo de Terrada, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Cassaforma System" }
+      "area": {
+        "title": "Area",
+        "description": "185 m²"
+      },
+      "ubication": {
+        "title": "Location",
+        "description": "Barrio El Portillo de Terrada, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materials",
+        "description": "Cassaforma System"
+      }
     }
   },
   {
@@ -218,9 +278,18 @@
           "Structural technical management"
         ]
       },
-      "area": { "title": "Area", "description": "335 m²" },
-      "ubication": { "title": "Location", "description": "Barrio Rincón de Viamonte, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materials", "description": "Traditional construction" }
+      "area": {
+        "title": "Area",
+        "description": "335 m²"
+      },
+      "ubication": {
+        "title": "Location",
+        "description": "Barrio Rincón de Viamonte, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materials",
+        "description": "Traditional construction"
+      }
     }
   }
 ]
