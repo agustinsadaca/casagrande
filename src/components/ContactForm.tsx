@@ -129,7 +129,8 @@ export function ContactForm() {
               placeholder={t('messagePlaceholder')}
               className={`${styles.input} fs24`}
               classNames={{ input: styles.formInput }}
-              minRows={4}
+              autosize
+              minRows={1}
               {...form.getInputProps('mensaje')}
             />
           </div>
