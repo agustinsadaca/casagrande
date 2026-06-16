@@ -6,6 +6,9 @@
   },
   "office": {
     "text": "En CASAGRANDE INGENIERIA calculamos, dirigimos y construimos. Desarrollamos soluciones estructurales para proyectos de arquitectura, integrando análisis técnico, experiencia constructiva y una mirada atenta al proceso de obra.",
+    "heroBoldPhrase": "calculamos, dirigimos y construimos",
+    "bimBoldPhrase": "metodología BIM",
+    "calcBoldPhrase": "calculamos, dirigimos y construimos",
     "whoWeAreTitle": "NOSOTROS",
     "whoWeAreText": "CASAGRANDE INGENIERIA es un estudio de ingeniería civil especializado en el desarrollo de soluciones estructurales para proyectos de arquitectura. Participamos en el desarrollo integral de viviendas unifamiliares, edificios residenciales, locales comerciales y naves industriales.\nEn Casagrande Ingeniería integramos análisis estructural, experiencia constructiva y una mirada atenta al proceso de ejecución, trabajando para que cada decisión técnica acompañe y potencie la propuesta arquitectónica mediante un enfoque integrado, optimizado a través de la metodología BIM.\nEntendemos cada proyecto como un proceso integral: calculamos, dirigimos y construimos obras de calidad, concebidas para brindar seguridad, eficiencia y perdurar en el tiempo.",
     "whatWeDoTitle": "NUESTROS SERVICIOS",
@@ -32,6 +35,7 @@
     "title": "Contáctenos",
     "namePlaceholder": "NOMBRE",
     "emailPlaceholder": "EMAIL",
+    "companyPlaceholder": "EMPRESA",
     "messagePlaceholder": "MENSAJE",
     "bodyText": "Tu proyecto empieza con una buena base. En CASAGRANDE INGENIERIA, nos involucramos desde el inicio.",
     "cta": "",
@@ -45,7 +49,9 @@
       "successTitle": "Formulario enviado",
       "successMessage": "Nos pondremos en contacto contigo pronto",
       "errorTitle": "Error",
-      "errorMessage": "No se pudo enviar el formulario. Inténtalo de nuevo."
+      "errorMessage": "No se pudo enviar el formulario. Inténtalo de nuevo.",
+      "botDetectedTitle": "Verificación fallida",
+      "botDetectedMessage": "No pudimos verificar que eres humano. Intentá de nuevo."
     }
   }
 }

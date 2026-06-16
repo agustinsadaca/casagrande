@@ -6,6 +6,9 @@
   },
   "office": {
     "text": "At CASAGRANDE INGENIERIA we calculate, direct and build. We develop structural solutions for architecture projects, integrating technical analysis, building expertise, and close attention to the construction process.",
+    "heroBoldPhrase": "we calculate, direct and build",
+    "bimBoldPhrase": "BIM methodology",
+    "calcBoldPhrase": "we calculate, direct, and build",
     "whoWeAreTitle": "Who We Are",
     "whoWeAreText": "CASAGRANDE INGENIERIA is a civil engineering studio specialized in the development of structural solutions for architecture projects. We participate in the comprehensive development of single-family homes, residential buildings, commercial spaces, and industrial warehouses.\nAt Casagrande Ingeniería we integrate structural analysis, construction expertise, and close attention to the execution process, working to ensure that each technical decision enhances and strengthens the architectural proposal through an integrated approach, optimized through BIM methodology.\nWe understand each project as an integral process: we calculate, direct, and build quality works, designed to provide safety, efficiency, and durability over time.",
     "whatWeDoTitle": "OUR SERVICES",
@@ -32,6 +35,7 @@
     "title": "Contact Us",
     "namePlaceholder": "NAME",
     "emailPlaceholder": "EMAIL",
+    "companyPlaceholder": "COMPANY",
     "messagePlaceholder": "HOW CAN WE HELP YOU?",
     "bodyText": "Your project starts with a solid foundation. At Casagrande INGENIERIA, we get involved from the very beginning.",
     "cta": "WE LOOK FORWARD TO HEARING FROM YOU!",
@@ -45,7 +49,9 @@
       "successTitle": "Form submitted",
       "successMessage": "We will get in touch with you soon",
       "errorTitle": "Error",
-      "errorMessage": "Could not submit the form. Please try again."
+      "errorMessage": "Could not submit the form. Please try again.",
+      "botDetectedTitle": "Verification failed",
+      "botDetectedMessage": "We could not verify that you are human. Please try again."
     }
   }
 }

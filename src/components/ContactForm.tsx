@@ -1,5 +1,6 @@
 'use client'
 
+import { useReCaptcha } from '@/app/ReCaptchaContext'
 import styles from '@/styles/ContactForm.module.css'
 import {
   Button,
@@ -10,31 +11,27 @@ import {
   Title
 } from '@mantine/core'
 import { useForm } from '@mantine/form'
-import { useMediaQuery } from '@mantine/hooks'
 import { notifications } from '@mantine/notifications'
 import { useTranslations } from 'next-intl'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 interface FormValues {
   nombre: string
   email: string
+  empresa: string
   mensaje: string
 }
 
 export function ContactForm() {
   const [loading, setLoading] = useState(false)
-  const isMobileClient = useMediaQuery('(max-width: 768px)')
-  const [isMobile, setIsMobile] = useState(true)
   const t = useTranslations('contact')
-
-  useEffect(() => {
-    setIsMobile(isMobileClient)
-  }, [isMobileClient])
+  const { captchaToken } = useReCaptcha()
 
   const form = useForm<FormValues>({
     initialValues: {
       nombre: '',
       email: '',
+      empresa: '',
       mensaje: ''
     },
     validate: {
@@ -55,8 +52,26 @@ export function ContactForm() {
 
     setLoading(true)
     try {
-      console.log(form.values)
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...form.values, captchaToken }),
+      })
+
+      if (res.status === 400) {
+        const data = await res.json()
+        if (data.error === 'bot') {
+          notifications.show({
+            title: t('notifications.botDetectedTitle'),
+            message: t('notifications.botDetectedMessage'),
+            color: 'red'
+          })
+          return
+        }
+        throw new Error('bad request')
+      }
+
+      if (!res.ok) throw new Error('server error')
 
       notifications.show({
         title: t('notifications.successTitle'),
@@ -84,7 +99,7 @@ export function ContactForm() {
       <Grid gutter="xl" className={styles.grid}>
         <Grid.Col span={{ base: 12, md: 6 }}>
           <Grid className={styles.grid}>
-            <Grid.Col span={{ base: 12, md: 6 }}>
+            <Grid.Col span={{ base: 12, md: 4 }}>
               <TextInput
                 placeholder={t('namePlaceholder')}
                 className={`${styles.input} fs24`}
@@ -92,7 +107,7 @@ export function ContactForm() {
                 {...form.getInputProps('nombre')}
               />
             </Grid.Col>
-            <Grid.Col span={{ base: 12, md: 6 }}>
+            <Grid.Col span={{ base: 12, md: 4 }}>
               <TextInput
                 placeholder={t('emailPlaceholder')}
                 className={`${styles.input} fs24`}
@@ -100,8 +115,16 @@ export function ContactForm() {
                 {...form.getInputProps('email')}
               />
             </Grid.Col>
+            <Grid.Col span={{ base: 12, md: 4 }}>
+              <TextInput
+                placeholder={t('companyPlaceholder')}
+                className={`${styles.input} fs24`}
+                classNames={{ input: styles.formInput }}
+                {...form.getInputProps('empresa')}
+              />
+            </Grid.Col>
           </Grid>
-          <div style={{ marginTop: isMobile ? '0px' : '60px' }}>
+          <div className={styles.textareaWrapper}>
             <Textarea
               placeholder={t('messagePlaceholder')}
               className={`${styles.input} fs24`}
@@ -120,7 +143,7 @@ export function ContactForm() {
           </Text>
         </Grid.Col>
       </Grid>
-      <div style={{ marginTop: '60px' }}>
+      <div className={styles.buttonWrapper}>
         <Button
           onClick={handleSubmit}
           variant="default"

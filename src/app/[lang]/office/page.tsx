@@ -25,8 +25,16 @@ export async function generateMetadata(
   }
 }
 
+function renderBold(text: string, phrase: string) {
+  const idx = text.indexOf(phrase)
+  if (idx === -1) return <>{text}</>
+  return <>{text.slice(0, idx)}<strong>{phrase}</strong>{text.slice(idx + phrase.length)}</>
+}
+
 export default async function OfficePage() {
   const t = await getTranslations('office')
+  const bimPhrase = t('bimBoldPhrase')
+  const calcPhrase = t('calcBoldPhrase')
 
   const servicios = [
     {
@@ -72,7 +80,11 @@ export default async function OfficePage() {
         <div className={styles.textContent}>
           {t('whoWeAreText').split('\n').map((paragraph, i) => (
             <p key={i} className={`fontUnageoRegular fs18 ${styles.paragraph}`}>
-              {paragraph}
+              {paragraph.includes(bimPhrase)
+                ? renderBold(paragraph, bimPhrase)
+                : paragraph.includes(calcPhrase)
+                  ? renderBold(paragraph, calcPhrase)
+                  : paragraph}
             </p>
           ))}
         </div>
@@ -83,7 +95,7 @@ export default async function OfficePage() {
           {t('whatWeDoTitle')}
         </h2>
         {servicios.map((seccion, idx) => (
-          <div key={idx}>
+          <div key={idx} className={styles.serviceSection}>
             <p className={`fontUnageoRegular fs18 ${styles.paragraph}`}>
               {seccion.intro}
             </p>

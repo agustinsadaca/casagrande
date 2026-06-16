@@ -36,10 +36,16 @@
   max-width: 640px;
 }
 
+.serviceSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .serviceGrid {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   list-style: none;
   padding: 0;
   margin: 0;

@@ -143,7 +143,7 @@ export default async function LocaleLayout({ children }: { children: React.React
             />
             <ClientView >
               <Header />
-              {children}
+              <main style={{ flex: 1 }}>{children}</main>
               <Footer />
             </ClientView>
           </MantineProvider>
