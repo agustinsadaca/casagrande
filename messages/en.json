@@ -5,15 +5,25 @@
     "contact": "CONTACT"
   },
   "office": {
-    "text": "At Casagrande Ingeniería we develop structural solutions for architecture projects, integrating technical analysis, building expertise, and close attention to the construction process.",
+    "text": "At CASAGRANDE INGENIERIA we calculate, direct and build. We develop structural solutions for architecture projects, integrating technical analysis, building expertise, and close attention to the construction process.",
     "whoWeAreTitle": "Who We Are",
-    "whoWeAreText": "We are a structural engineering studio located in Mendoza, Argentina, specialized in the design and development of residential buildings, multi-story buildings, and industrial warehouses.\n\nWith a contemporary vision of engineering, we work on projects where technical precision, structural efficiency, and construction quality are integral to the architecture. We approach each project comprehensively, delivering clear, efficient solutions tailored to the specific demands of each commission.",
-    "whatWeDoTitle": "What We Do",
-    "whatWeDoIntro": "We specialize in the structural design and analysis of reinforced concrete, steel, and industrialized construction systems, including:",
-    "whatWeDoItem1": "Single-family homes and residential buildings.",
-    "whatWeDoItem2": "Multi-family buildings and urban developments.",
-    "whatWeDoItem3": "Commercial buildings and mixed-use developments.",
-    "whatWeDoItem4": "Warehouses and industrial facilities."
+    "whoWeAreText": "CASAGRANDE INGENIERIA is a civil engineering studio specialized in the development of structural solutions for architecture projects. We participate in the comprehensive development of single-family homes, residential buildings, commercial spaces, and industrial warehouses.\nAt Casagrande Ingeniería we integrate structural analysis, construction expertise, and close attention to the execution process, working to ensure that each technical decision enhances and strengthens the architectural proposal through an integrated approach, optimized through BIM methodology.\nWe understand each project as an integral process: we calculate, direct, and build quality works, designed to provide safety, efficiency, and durability over time.",
+    "whatWeDoTitle": "OUR SERVICES",
+    "proyectamosIntro": "WE DESIGN",
+    "proyectamosItem1": "Structural calculation, design and documentation.",
+    "proyectamosItem2": "Executive plans and technical documentation.",
+    "proyectamosItem3": "Soil studies.",
+    "proyectamosItem4": "Budgets and cost estimates.",
+    "dirigimosIntro": "WE DIRECT",
+    "dirigimosItem1": "Technical management and project supervision.",
+    "dirigimosItem2": "Project monitoring and coordination.",
+    "construimosIntro": "WE BUILD",
+    "construimosItem1": "Turnkey project execution.",
+    "construimosItem2": "Construction process management.",
+    "construimosItem3": "Quality control and deadline compliance.",
+    "asesoramosIntro": "WE ADVISE",
+    "asesoramosItem1": "Assessment and survey of existing structures.",
+    "asesoramosItem2": "Technical consulting and professional guidance."
   },
   "projects": {
     "seeMore": "SEE MORE"
