@@ -1,6 +1,6 @@
+import styles from '@/styles/Office.module.css'
 import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import styles from '@/styles/Office.module.css'
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || 'https://casagrandeing.com').replace(/\/$/, '')
 
@@ -25,14 +25,49 @@ export async function generateMetadata(
   }
 }
 
+function renderBold(text: string, phrase: string) {
+  const idx = text.indexOf(phrase)
+  if (idx === -1) return <>{text}</>
+  return <>{text.slice(0, idx)}<strong>{phrase}</strong>{text.slice(idx + phrase.length)}</>
+}
+
 export default async function OfficePage() {
   const t = await getTranslations('office')
+  const bimPhrase = t('bimBoldPhrase')
+  const calcPhrase = t('calcBoldPhrase')
 
-  const whatWeDoItems = [
-    t('whatWeDoItem1'),
-    t('whatWeDoItem2'),
-    t('whatWeDoItem3'),
-    t('whatWeDoItem4'),
+  const servicios = [
+    {
+      intro: t('proyectamosIntro'),
+      items: [
+        t('proyectamosItem1'),
+        t('proyectamosItem2'),
+        t('proyectamosItem3'),
+        t('proyectamosItem4'),
+      ]
+    },
+    {
+      intro: t('dirigimosIntro'),
+      items: [
+        t('dirigimosItem1'),
+        t('dirigimosItem2'),
+      ]
+    },
+    {
+      intro: t('construimosIntro'),
+      items: [
+        t('construimosItem1'),
+        t('construimosItem2'),
+        t('construimosItem3'),
+      ]
+    },
+    {
+      intro: t('asesoramosIntro'),
+      items: [
+        t('asesoramosItem1'),
+        t('asesoramosItem2'),
+      ]
+    }
   ]
 
   return (
@@ -43,9 +78,13 @@ export default async function OfficePage() {
           {t('whoWeAreTitle')}
         </h2>
         <div className={styles.textContent}>
-          {t('whoWeAreText').split('\n\n').map((paragraph, i) => (
+          {t('whoWeAreText').split('\n').map((paragraph, i) => (
             <p key={i} className={`fontUnageoRegular fs18 ${styles.paragraph}`}>
-              {paragraph}
+              {paragraph.includes(bimPhrase)
+                ? renderBold(paragraph, bimPhrase)
+                : paragraph.includes(calcPhrase)
+                  ? renderBold(paragraph, calcPhrase)
+                  : paragraph}
             </p>
           ))}
         </div>
@@ -55,16 +94,20 @@ export default async function OfficePage() {
         <h2 className={`fontUnageoRegularBold fs36 ${styles.blockTitle}`}>
           {t('whatWeDoTitle')}
         </h2>
-        <p className={`fontUnageoRegular fs18 ${styles.paragraph}`}>
-          {t('whatWeDoIntro')}
-        </p>
-        <ul className={styles.serviceGrid}>
-          {whatWeDoItems.map((item, i) => (
-            <li key={i} className={`fontUnageoRegular fs16 ${styles.serviceItem}`}>
-              {item}
-            </li>
-          ))}
-        </ul>
+        {servicios.map((seccion, idx) => (
+          <div key={idx} className={styles.serviceSection}>
+            <p className={`fontUnageoRegular fs18 ${styles.paragraph}`}>
+              {seccion.intro}
+            </p>
+            <ul className={styles.serviceGrid}>
+              {seccion.items.map((item, i) => (
+                <li key={i} className={`fontUnageoRegular fs16 ${styles.serviceItem}`}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
 
     </section>

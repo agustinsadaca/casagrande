@@ -29,73 +29,83 @@ export default function Hero() {
 
     if (!hero || !logo || isMobile) return
 
-    const isShortViewport = window.innerHeight < 730
-    const logoWidth = 500
-    const logoHeight = isShortViewport ? 220 : 300
-    const logoTop = isShortViewport ? '25%' : '30%'
+    function reset() {
+      ScrollTrigger.getAll().forEach(t => t.kill())
+      gsap.killTweensOf(logo)
+      gsap.set(logo, { clearProps: 'all' })
+    }
 
-    gsap.set(logo, {
-      position: 'absolute',
-      top: logoTop,
-      left: '50%',
-      xPercent: -50,
-      yPercent: -50,
-      width: `${logoWidth}px`,
-      height: `${logoHeight}px`,
-      zIndex: 10
-    })
+    function setup() {
+      reset()
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: hero,
-        start: '-100px top',
-        end: '+=110px',
-        scrub: true,
-        pin: false,
-        anticipatePin: 1,
-        markers: false,
-        onEnter: () => {
-          gsap.set(logo, { zIndex: 100 })
-          if (hasInitiallyAnimated.current) {
+      const isShortViewport = window.innerHeight < 730
+      const logoHeight = isShortViewport ? 220 : 300
+      const logoTop = isShortViewport ? '25%' : '30%'
+
+      gsap.set(logo, {
+        position: 'absolute',
+        top: logoTop,
+        left: '50%',
+        xPercent: -50,
+        yPercent: -50,
+        width: '500px',
+        height: `${logoHeight}px`,
+        zIndex: 10
+      })
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: hero,
+          start: '-100px top',
+          end: '+=110px',
+          scrub: true,
+          pin: false,
+          anticipatePin: 1,
+          markers: false,
+          onEnter: () => {
+            gsap.set(logo, { zIndex: 100 })
+            if (hasInitiallyAnimated.current) {
+              triggerSvgAnimation()
+            }
+          },
+          onUpdate: (self) => {
+            if (self.progress >= 0.99) {
+              gsap.set(logo, { position: 'fixed', top: '30px', left: '60px' })
+            } else {
+              gsap.set(logo, { position: 'absolute' })
+            }
+          },
+          onLeaveBack: () => {
+            gsap.set(logo, { position: 'absolute', clearProps: 'top,left' })
             triggerSvgAnimation()
           }
-        },
-        onUpdate: (self) => {
-          if (self.progress >= 0.99) {
-            gsap.set(logo, {
-              position: 'fixed',
-              top: '30px',
-              left: '60px'
-            })
-          } else {
-            gsap.set(logo, { position: 'absolute' })
-          }
-        },
-        onLeaveBack: () => {
-          gsap.set(logo, {
-            position: 'absolute',
-            clearProps: 'top,left'
-          })
-          triggerSvgAnimation()
         }
-      }
-    })
+      }).to(logo, {
+        top: '30px',
+        left: '60px',
+        xPercent: 0,
+        yPercent: 0,
+        width: '170px',
+        height: '60px',
+        zIndex: 100,
+        ease: 'power2.inOut'
+      })
+    }
 
+    let debounceTimer: ReturnType<typeof setTimeout>
+    const handleResize = () => {
+      reset()
+      clearTimeout(debounceTimer)
+      debounceTimer = setTimeout(setup, 250)
+    }
 
-    tl.to(logo, {
-      top: '30px',
-      left: '60px',
-      xPercent: 0,
-      yPercent: 0,
-      width: '170px',
-      height: '60px',
-      zIndex: 100,
-      ease: 'power2.inOut'
-    })
+    setup()
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill())
-      gsap.set(logo, { clearProps: 'all' })
+      window.removeEventListener('resize', handleResize)
+      clearTimeout(debounceTimer)
+      reset()
     }
   }, [isMobile])
 
@@ -174,7 +184,13 @@ export default function Hero() {
 
       <section ref={heroRef}>
         <p className={`${isMobile ? 'fs24' : 'fs30'} fontUnageoRegularSemiBold`} style={{ textAlign: 'center' }}>
-          {t('text')}
+          {(() => {
+            const text = t('text')
+            const bold = t('heroBoldPhrase')
+            const idx = text.indexOf(bold)
+            if (idx === -1) return text
+            return <>{text.slice(0, idx)}<strong>{bold}</strong>{text.slice(idx + bold.length)}</>
+          })()}
         </p>
       </section>
     </section>

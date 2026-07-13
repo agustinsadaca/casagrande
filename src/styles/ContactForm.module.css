@@ -34,6 +34,14 @@
   font-size: calc(0.5vw + 15.4px);
 }
 
+.textareaWrapper {
+  margin-top: 20px;
+}
+
+.buttonWrapper {
+  margin-top: 40px;
+}
+
 .button {
   margin-top: 0.5rem;
   border: 1px solid black;
@@ -66,6 +74,14 @@
 
   .grid {
     margin-top: 30px;
+  }
+
+  .textareaWrapper {
+    margin-top: 0;
+  }
+
+  .buttonWrapper {
+    margin-top: 24px;
   }
 
 }

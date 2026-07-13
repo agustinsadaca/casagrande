@@ -5,8 +5,8 @@ import { Carousel } from '@mantine/carousel'
 import { useMediaQuery } from '@mantine/hooks'
 import Autoplay from 'embla-carousel-autoplay'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { useLocale } from 'next-intl'
+import Image from 'next/image'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { ProjectItem } from '../types/project'
@@ -99,14 +99,20 @@ export default function Projects({ limit }: { limit?: number }) {
     return <div className={styles.error}>{error}</div>
   }
 
-  if (projects.length === 0) {
+  const visibleProjects = projects.filter(
+    p => (p as ProjectItem & { visible?: boolean }).visible !== false
+  )
+
+  if (visibleProjects.length === 0) {
     return <div className={styles.error}>No projects found</div>
   }
+
+  const displayedProjects = limit ? visibleProjects.slice(0, limit) : visibleProjects
 
   return (
     <section id="projects" className={styles.projectsSection}>
       <div className={styles.projectsGrid}>
-        {(limit ? projects.slice(0, limit) : projects).map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <div
             key={project.id}
             onClick={() => handleClick(project)}

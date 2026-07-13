@@ -111,7 +111,7 @@
   },
   {
     "id": "Casa Cubo",
-    "visible": true,
+    "visible": false,
     "imageHomeUrls": [
       "/projects/398x398/4_A_Emiliano Cuello_398.webp",
       "/projects/398x398/4_B_Emiliano Cuello_398.webp",
@@ -147,7 +147,7 @@
   },
   {
     "id": "Sector Fuego",
-    "visible": true,
+    "visible": false,
     "imageHomeUrls": [
       "/projects/398x398/5_A_Titos_Tañez_Wolf_398.webp",
       "/projects/398x398/5_B_Titos_Tañez_Wolf_398.webp",
@@ -179,7 +179,7 @@
   },
   {
     "id": "casa-arcos",
-    "visible": true,
+    "visible": false,
     "imageHomeUrls": [
       "/projects/398x398/6_A_Arcos_398.webp",
       "/projects/398x398/6_B_Arcos_398.webp",
@@ -217,7 +217,7 @@
   },
   {
     "id": "casa-rico",
-    "visible": true,
+    "visible": false,
     "imageHomeUrls": [
       "/projects/398x398/7_A_Manuel Rico_398.webp",
       "/projects/398x398/7_B_Manuel Rico_398.webp",

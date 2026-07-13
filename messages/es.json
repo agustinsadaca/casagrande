@@ -5,15 +5,28 @@
     "contact": "CONTACTO"
   },
   "office": {
-    "text": "En Casagrande Ingeniería desarrollamos soluciones estructurales para proyectos de arquitectura, integrando análisis técnico, experiencia constructiva y una mirada atenta al proceso de obra.",
-    "whoWeAreTitle": "Quiénes Somos",
-    "whoWeAreText": "Somos un estudio de ingeniería estructural ubicado en Mendoza, Argentina, especializado en el cálculo y desarrollo de viviendas, edificios y naves industriales.\n\nCon una visión contemporánea de la ingeniería, trabajamos en proyectos donde la precisión técnica, la eficiencia estructural y la calidad constructiva forman parte esencial de la arquitectura. Desarrollamos cada obra de manera integral, buscando soluciones claras, eficientes y adaptadas a las necesidades específicas de cada desafío.",
-    "whatWeDoTitle": "Qué Hacemos",
-    "whatWeDoIntro": "Participamos en el diseño y cálculo de estructuras de hormigón armado, acero y sistemas constructivos industrializados, abordando:",
-    "whatWeDoItem1": "Proyectos residenciales y viviendas unifamiliares.",
-    "whatWeDoItem2": "Edificios multifamiliares y desarrollos urbanos.",
-    "whatWeDoItem3": "Locales comerciales y arquitectura comercial.",
-    "whatWeDoItem4": "Galpones y naves industriales."
+    "text": "En CASAGRANDE INGENIERIA calculamos, dirigimos y construimos. Desarrollamos soluciones estructurales para proyectos de arquitectura, integrando análisis técnico, experiencia constructiva y una mirada atenta al proceso de obra.",
+    "heroBoldPhrase": "calculamos, dirigimos y construimos",
+    "bimBoldPhrase": "metodología BIM",
+    "calcBoldPhrase": "calculamos, dirigimos y construimos",
+    "whoWeAreTitle": "NOSOTROS",
+    "whoWeAreText": "CASAGRANDE INGENIERIA es un estudio de ingeniería civil especializado en el desarrollo de soluciones estructurales para proyectos de arquitectura. Participamos en el desarrollo integral de viviendas unifamiliares, edificios residenciales, locales comerciales y naves industriales.\nEn Casagrande Ingeniería integramos análisis estructural, experiencia constructiva y una mirada atenta al proceso de ejecución, trabajando para que cada decisión técnica acompañe y potencie la propuesta arquitectónica mediante un enfoque integrado, optimizado a través de la metodología BIM.\nEntendemos cada proyecto como un proceso integral: calculamos, dirigimos y construimos obras de calidad, concebidas para brindar seguridad, eficiencia y perdurar en el tiempo.",
+    "whatWeDoTitle": "NUESTROS SERVICIOS",
+    "proyectamosIntro": "PROYECTAMOS",
+    "proyectamosItem1": "Cálculo, diseño y documentación estructural.",
+    "proyectamosItem2": "Planos ejecutivos y documentación técnica.",
+    "proyectamosItem3": "Estudio de suelos.",
+    "proyectamosItem4": "Cómputos y presupuestos.",
+    "dirigimosIntro": "DIRIGIMOS",
+    "dirigimosItem1": "Dirección técnica y conducción de obras.",
+    "dirigimosItem2": "Seguimiento y coordinación de obra.",
+    "construimosIntro": "CONSTRUIMOS",
+    "construimosItem1": "Ejecución de obras llave en mano.",
+    "construimosItem2": "Gestión del proceso constructivo.",
+    "construimosItem3": "Control de calidad y cumplimiento de plazos.",
+    "asesoramosIntro": "ASESORAMOS",
+    "asesoramosItem1": "Evaluación y relevamiento de estructuras existentes.",
+    "asesoramosItem2": "Consultoría técnica y acompañamiento profesional."
   },
   "projects": {
     "seeMore": "VER MÁS"
@@ -22,9 +35,10 @@
     "title": "Contáctenos",
     "namePlaceholder": "NOMBRE",
     "emailPlaceholder": "EMAIL",
-    "messagePlaceholder": "¿EN QUÉ PODEMOS AYUDARTE?",
+    "companyPlaceholder": "EMPRESA",
+    "messagePlaceholder": "MENSAJE",
     "bodyText": "Tu proyecto empieza con una buena base. En CASAGRANDE INGENIERIA, nos involucramos desde el inicio.",
-    "cta": "ESPERAMOS TU MENSAJE!",
+    "cta": "",
     "sendButton": "Enviar mensaje",
     "validation": {
       "nameRequired": "El nombre es obligatorio",
@@ -35,7 +49,9 @@
       "successTitle": "Formulario enviado",
       "successMessage": "Nos pondremos en contacto contigo pronto",
       "errorTitle": "Error",
-      "errorMessage": "No se pudo enviar el formulario. Inténtalo de nuevo."
+      "errorMessage": "No se pudo enviar el formulario. Inténtalo de nuevo.",
+      "botDetectedTitle": "Verificación fallida",
+      "botDetectedMessage": "No pudimos verificar que eres humano. Intentá de nuevo."
     }
   }
 }
