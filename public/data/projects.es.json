@@ -23,9 +23,18 @@
           "Dirección técnica estructural"
         ]
       },
-      "area": { "title": "Superficie", "description": "515 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio Mendoza Norte, Las Heras, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción tradicional" }
+      "area": {
+        "title": "Superficie",
+        "description": "520 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Mendoza Norte, Las Heras, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
     }
   },
   {
@@ -49,9 +58,18 @@
           "Cálculo de estructura"
         ]
       },
-      "area": { "title": "Superficie", "description": "94 m²" },
-      "ubication": { "title": "Ubicación", "description": "Guaymallén, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción en seco" }
+      "area": {
+        "title": "Superficie",
+        "description": "94 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Guaymallén, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción en seco"
+      }
     }
   },
   {
@@ -77,9 +95,18 @@
           "Instalaciones de gas"
         ]
       },
-      "area": { "title": "Superficie", "description": "257.80 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción tradicional" }
+      "area": {
+        "title": "Superficie",
+        "description": "257.80 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
     }
   },
   {
@@ -104,9 +131,18 @@
           "Cálculo de estructura"
         ]
       },
-      "area": { "title": "Superficie", "description": "122.61 m²" },
-      "ubication": { "title": "Ubicación", "description": "Maipú, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción en seco" }
+      "area": {
+        "title": "Superficie",
+        "description": "122.61 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Maipú, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción en seco"
+      }
     }
   },
   {
@@ -131,8 +167,14 @@
           "Cálculo de estructura"
         ]
       },
-      "ubication": { "title": "Ubicación", "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción tradicional" }
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Pueblo Malbec, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
     }
   },
   {
@@ -159,9 +201,18 @@
           "Cálculo de estructura"
         ]
       },
-      "area": { "title": "Superficie", "description": "123 m²" },
-      "ubication": { "title": "Ubicación", "description": "Chacras de Coria, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción tradicional" }
+      "area": {
+        "title": "Superficie",
+        "description": "123 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Chacras de Coria, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
     }
   },
   {
@@ -188,9 +239,18 @@
           "Dirección técnica estructural"
         ]
       },
-      "area": { "title": "Superficie", "description": "185 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio El Portillo de Terrada, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Sistema Cassaforma" }
+      "area": {
+        "title": "Superficie",
+        "description": "185 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio El Portillo de Terrada, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Sistema Cassaforma"
+      }
     }
   },
   {
@@ -218,9 +278,18 @@
           "Dirección técnica estructural"
         ]
       },
-      "area": { "title": "Superficie", "description": "335 m²" },
-      "ubication": { "title": "Ubicación", "description": "Barrio Rincón de Viamonte, Luján de Cuyo, Mendoza, Argentina" },
-      "material": { "title": "Materialidad", "description": "Construcción tradicional" }
+      "area": {
+        "title": "Superficie",
+        "description": "335 m²"
+      },
+      "ubication": {
+        "title": "Ubicación",
+        "description": "Barrio Rincón de Viamonte, Luján de Cuyo, Mendoza, Argentina"
+      },
+      "material": {
+        "title": "Materialidad",
+        "description": "Construcción tradicional"
+      }
     }
   }
 ]
