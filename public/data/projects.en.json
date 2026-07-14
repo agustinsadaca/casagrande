@@ -111,7 +111,7 @@
   },
   {
     "id": "Casa Cubo",
-    "visible": false,
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/4_A_Emiliano Cuello_398.webp",
       "/projects/398x398/4_B_Emiliano Cuello_398.webp",
@@ -147,7 +147,7 @@
   },
   {
     "id": "Sector Fuego",
-    "visible": false,
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/5_A_Titos_Tañez_Wolf_398.webp",
       "/projects/398x398/5_B_Titos_Tañez_Wolf_398.webp",

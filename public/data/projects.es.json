@@ -111,7 +111,7 @@
   },
   {
     "id": "Casa Cubo",
-    "visible": false,
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/4_A_Emiliano Cuello_398.webp",
       "/projects/398x398/4_B_Emiliano Cuello_398.webp",
