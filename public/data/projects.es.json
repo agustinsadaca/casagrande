@@ -255,7 +255,7 @@
   },
   {
     "id": "casa-david",
-    "visible": false,
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/8_A_Eduardo Carleti_398.webp",
       "/projects/398x398/8_B_Eduardo Carleti_398.webp",
