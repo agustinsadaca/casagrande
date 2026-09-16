@@ -254,15 +254,15 @@
     }
   },
   {
-    "id": "casa-carleti",
-    "visible": false,
+    "id": "casa-david",
+    "visible": true,
     "imageHomeUrls": [
       "/projects/398x398/8_A_Eduardo Carleti_398.webp",
       "/projects/398x398/8_B_Eduardo Carleti_398.webp",
       "/projects/398x398/8_C_Eduardo Carleti_398.webp"
     ],
     "projectName": "DR Project",
-    "subtitle": "Eduardo Carleti",
+    "subtitle": "Arch. Eduardo Carleti + Arc. Manuel Caram",
     "imageDetailUrls": [
       "/projects/8_A_Eduardo_Carleti__COLOR.webp",
       "/projects/8_B_Eduardo_Carleti__COLOR.webp",
