@@ -73,6 +73,7 @@ export default function ProjectPageClient() {
         <div className={styles.columns}>
           <div className={styles.column}>
             <h1 className={`${styles.projectName} c131313 fs24`}>{projectData.projectName}</h1>
+            <div className="c9A9A9A fs21">Ing. Denise Marovich</div>
             {projectData.subtitle && (
               <div className={`c9A9A9A fs21`}>{projectData.subtitle}</div>
             )}
